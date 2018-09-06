@@ -18,6 +18,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Trezor.Net" Version="1.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Hardwarewallets.Net.Base\Hardwarewallets.Net.Base.csproj" />
   </ItemGroup>
 
