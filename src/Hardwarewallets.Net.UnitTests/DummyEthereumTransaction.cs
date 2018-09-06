@@ -1,5 +1,6 @@
 ﻿using Hardwarewallets.Net.Base;
 using Hardwarewallets.Net.Base.Ethereum;
+using System.Numerics;
 
 namespace Hardwarewallets.Net.UnitTests
 {
@@ -7,11 +8,11 @@ namespace Hardwarewallets.Net.UnitTests
     {
         public uint ChainId => 0;
 
-        public decimal GasPrice => (decimal)0.0000000035;
+        public BigInteger GasPrice => 1000000000;
 
-        public int GasLimit => 21000;
+        public BigInteger GasLimit => 21000;
 
-        public string Nonce => "0";
+        public BigInteger Nonce => 0;
 
         public IAddressPath From => new AddressPath(false, 60, 0, false, 0);
 
