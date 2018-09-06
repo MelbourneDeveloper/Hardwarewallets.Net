@@ -40,10 +40,9 @@ namespace Hardwarewallets.Net
             where T2 : ISignedTransaction
 #pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            if (typeof(T2) is ISignedEthereumTransaction)
+            if (transaction is DummyEthereumTransaction)
             {
                 var signedTransaction = new DummySignedEthereumTransaction();
-
                 return (T2)(ISignedTransaction)signedTransaction;
             }
 
