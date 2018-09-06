@@ -3,8 +3,8 @@
     public interface IEthereumTransaction : ITransaction
     {
         uint ChainId { get; }
-        long GasPrice { get; }
-        long GasLimit { get; }
+        decimal GasPrice { get; }
+        int GasLimit { get; }
         string Nonce { get; }
     }
 }

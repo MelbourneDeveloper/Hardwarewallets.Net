@@ -32,9 +32,9 @@ namespace Hardwarewallets.Net
             }
         }
 
-        public async Task<byte[]> SignTransaction<T>(T transaction) where T : ITransaction
+        public async Task<T2> SignTransaction<T, T2>(T transaction) where T : ITransaction
         {
-            return new byte[0];
+            var signedTransaction = new 
         }
     }
 }

@@ -1,4 +1,5 @@
 using Hardwarewallets.Net.Base;
+using Hardwarewallets.Net.Base.Ethereum;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -35,5 +36,14 @@ namespace Hardwarewallets.Net.UnitTests
             var publicKey = await HardwarewalletManager.GetPublicKeyAsync(new AddressPath(true, 60, 0, false, 0), true);
             Assert.Equal("0x3f2dD9850509367b57C900F7e1C5f4F0bfF1014Bf4F0bfF1014B", publicKey);
         }
+
+        [Fact]
+        public async Task SignEthereumTransaction()
+        {
+            var signedTransaction = await HardwarewalletManager.SignTransaction<IEthereumTransaction, ISignedEthereumTransaction>(new DummyEthereumTransaction());
+            Assert.Equal(32, signedTransaction.SignatureR.Length);
+            Assert.Equal(32, signedTransaction.SignatureS.Length);
+        }
+
     }
 }
