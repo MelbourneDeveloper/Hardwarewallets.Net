@@ -9,4 +9,12 @@
     <FileVersion>0.1.0.0</FileVersion>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+    <OutputPath>C:\GitRepos\Hardwarewallets.Net\NuGet\</OutputPath>
+  </PropertyGroup>
+
 </Project>
