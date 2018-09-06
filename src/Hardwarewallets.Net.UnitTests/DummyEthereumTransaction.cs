@@ -19,5 +19,7 @@ namespace Hardwarewallets.Net.UnitTests
         public decimal Value => (decimal)2.03016804;
 
         public string To => "0x3f2dD9850509367b57C900F7e1C5f4F0bfF1014B";
+
+        public byte[] Data => new byte[0];
     }
 }

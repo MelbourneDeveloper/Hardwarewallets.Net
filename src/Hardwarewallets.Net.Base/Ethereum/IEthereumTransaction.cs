@@ -8,5 +8,6 @@ namespace Hardwarewallets.Net.Base.Ethereum
         BigInteger GasPrice { get; }
         BigInteger GasLimit { get; }
         BigInteger Nonce { get; }
+        byte[] Data { get; }
     }
 }
