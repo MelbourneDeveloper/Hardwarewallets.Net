@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Hardwarewallets.Net.UnitTests
 {
-    public class UnitTests
+    public class DummyUnitTests
     {
         private static IHardwarewalletManager HardwarewalletManager = new DummyWalletManager();
 
