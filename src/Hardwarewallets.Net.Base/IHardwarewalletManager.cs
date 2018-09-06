@@ -1,8 +1,10 @@
-﻿namespace Hardwarewallets.Net.Base
+﻿using System.Threading.Tasks;
+
+namespace Hardwarewallets.Net.Base
 {
     interface IHardwarewalletManager
     {
-        string GetPublicKey(IAddressPath addressPath, bool display);
-        string GetAddress(IAddressPath addressPath, bool display);
+        Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display);
+        Task<string> GetAddressAsync(IAddressPath addressPath, bool display);
     }
 }
