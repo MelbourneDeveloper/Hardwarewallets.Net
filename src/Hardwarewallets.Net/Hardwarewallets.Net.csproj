@@ -5,6 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net/blob/master/LICENSE</PackageLicenseUrl>
+    <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
+    <Version>0.1.0</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
