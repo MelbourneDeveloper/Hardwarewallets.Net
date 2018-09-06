@@ -10,6 +10,5 @@
         uint Account { get; }
         uint Change { get; }
         uint AddressIndex { get; }
-        uint[] ToArray();
     }
 }
