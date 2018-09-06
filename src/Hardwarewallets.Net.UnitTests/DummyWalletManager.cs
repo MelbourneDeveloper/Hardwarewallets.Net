@@ -1,4 +1,6 @@
 ﻿using Hardwarewallets.Net.Base;
+using Hardwarewallets.Net.Base.Ethereum;
+using Hardwarewallets.Net.UnitTests;
 using System;
 using System.Threading.Tasks;
 
@@ -32,9 +34,20 @@ namespace Hardwarewallets.Net
             }
         }
 
-        public async Task<T2> SignTransaction<T, T2>(T transaction) where T : ITransaction
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+        public async Task<T2> SignTransaction<T, T2>(T transaction)
+            where T : ITransaction
+            where T2 : ISignedTransaction
+#pragma warning restore CS1998 // Async method lacks 'await' operators and will run synchronously
         {
-            var signedTransaction = new 
+            if (typeof(T2) is ISignedEthereumTransaction)
+            {
+                var signedTransaction = new DummySignedEthereumTransaction();
+
+                return (T2)(ISignedTransaction)signedTransaction;
+            }
+
+            throw new NotImplementedException();
         }
     }
 }

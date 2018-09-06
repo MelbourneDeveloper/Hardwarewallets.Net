@@ -6,6 +6,8 @@ namespace Hardwarewallets.Net.Base
     {
         Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display);
         Task<string> GetAddressAsync(IAddressPath addressPath, bool display);
-        Task<T2> SignTransaction<T, T2>(T transaction) where T : ITransaction;
+        Task<T2> SignTransaction<T, T2>(T transaction)
+            where T : ITransaction
+            where T2 : ISignedTransaction;
     }
 }
