@@ -7,6 +7,8 @@ namespace Hardwarewallets.Net
     {
         KeyPath KeyPath { get; set; }
 
+        //TODO: These numbers should be unhardended. 
+
         public uint Purpose => KeyPath.Indexes[0];
 
         public uint CoinType => KeyPath.Indexes[1];
