@@ -1,5 +1,4 @@
 ﻿using Hardwarewallets.Net.Base;
-using Hardwarewallets.Net.Base.Ethereum;
 using Hardwarewallets.Net.UnitTests;
 using System;
 using System.Threading.Tasks;
