@@ -1,4 +1,5 @@
 ﻿using LedgerWallet;
+using NBitcoin;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -14,7 +15,7 @@ namespace Hardwarewallets.Net.UnitTests
         {
             _LedgerClient = (await LedgerClient.GetHIDLedgersAsync()).First();
             var ledgerDotNetApiWrapper = new LedgerDotNetApiWrapper(_LedgerClient);
-            var address = await ledgerDotNetApiWrapper.GetAddressAsync(new AddressPath(true, 0, 0, false, 0), true);
+            var address = await ledgerDotNetApiWrapper.GetAddressAsync(new NicolasFlavouredAddressPath(new KeyPath("49'/0'/0'/0/0")), true);
         }
     }
 }
