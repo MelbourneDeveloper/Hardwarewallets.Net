@@ -6,17 +6,21 @@ using Xunit;
 
 namespace Hardwarewallets.Net.UnitTests
 {
-    public class LedgerDotNetApiTests
+    public class LedgerDotNetApiTests : UnitTestBase
     {
-        private static LedgerClient _LedgerClient;
-
         [Fact]
-        public async Task GetBitcoinAddress()
+        public override async Task GetBitcoinAddress()
         {
-            _LedgerClient = (await LedgerClient.GetHIDLedgersAsync()).First();
-            var ledgerDotNetApiWrapper = new LedgerDotNetApiWrapper(_LedgerClient);
+            await Initialize();
+
             //TODO: These should be hardended and they should be unhardened at the other end
-            var address = await ledgerDotNetApiWrapper.GetAddressAsync(new NicolasFlavouredAddressPath(new KeyPath("49/0/0/0/0")), true);
+            var address = await HardwarewalletManager.GetAddressAsync(new NicolasFlavouredAddressPath(new KeyPath("49/0/0/0/0")), true);
+        }
+
+        public override async Task Initialize()
+        {
+            var ledgerClient = (await LedgerClient.GetHIDLedgersAsync()).First();
+            HardwarewalletManager = new LedgerDotNetApiWrapper(ledgerClient);
         }
     }
 }
