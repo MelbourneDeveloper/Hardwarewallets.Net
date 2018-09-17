@@ -7,28 +7,19 @@ using Xunit;
 
 namespace Hardwarewallets.Net.UnitTests
 {
-    public class TrezorUnitTests
+    public class TrezorUnitTests : UnitTestBase
     {
-        private static TrezorManager TrezorManager;
-
-        [Fact]
-        public async Task GetTrezorBitcoinAddress()
+        public override async Task Initialize()
         {
-            await GetAndInitialize();
-            var trezorManagerWrapper = new TrezorManagerWrapper(TrezorManager);
-            var address = await trezorManagerWrapper.GetAddressAsync(new AddressPath(true, 0, 0, false, 0), true);
-        }
-
-        private async Task GetAndInitialize()
-        {
-            if (TrezorManager != null)
+            if (HardwarewalletManager != null)
             {
                 return;
             }
 
             var trezorHidDevice = await Connect();
-            TrezorManager = new TrezorManager(GetPin, trezorHidDevice);
-            await TrezorManager.InitializeAsync();
+            var trezorManager = new TrezorManager(GetPin, trezorHidDevice);
+            await trezorManager.InitializeAsync();
+            HardwarewalletManager = new TrezorManagerWrapper(trezorManager);
         }
 
         private async Task<IHidDevice> Connect()

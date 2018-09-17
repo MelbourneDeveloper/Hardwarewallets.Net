@@ -1,5 +1,7 @@
 ﻿using Hardwarewallets.Net.Base;
+using NBitcoin;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace Hardwarewallets.Net.UnitTests
 {
@@ -7,6 +9,12 @@ namespace Hardwarewallets.Net.UnitTests
     {
         public static IHardwarewalletManager HardwarewalletManager { get; protected set; }
         public abstract Task Initialize();
-        public abstract Task GetBitcoinAddress();
+
+        [Fact]
+        public async Task GetBitcoinAddress()
+        {
+            await Initialize();
+            var address = await HardwarewalletManager.GetAddressAsync(new NicolasFlavouredAddressPath(new KeyPath("49/0/0/0/0")), true);
+        }
     }
 }
