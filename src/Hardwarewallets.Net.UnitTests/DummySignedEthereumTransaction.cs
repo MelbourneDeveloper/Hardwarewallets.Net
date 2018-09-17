@@ -1,5 +1,4 @@
 ﻿using Hardwarewallets.Net.Base.Ethereum;
-using System;
 
 namespace Hardwarewallets.Net.UnitTests
 {

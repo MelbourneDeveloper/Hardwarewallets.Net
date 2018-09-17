@@ -3,7 +3,6 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Trezor.Net;
-using Xunit;
 
 namespace Hardwarewallets.Net.UnitTests
 {
