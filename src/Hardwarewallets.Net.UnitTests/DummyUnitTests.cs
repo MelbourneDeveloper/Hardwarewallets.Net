@@ -1,19 +1,14 @@
-using Hardwarewallets.Net.Base;
 using Hardwarewallets.Net.Base.Ethereum;
 using System.Threading.Tasks;
 using Xunit;
 
 namespace Hardwarewallets.Net.UnitTests
 {
-    public class DummyUnitTests
+    public class DummyUnitTests : UnitTestBase
     {
-        private static IHardwarewalletManager HardwarewalletManager = new DummyWalletManager();
-
-        [Fact]
-        public async Task GetBitcoinAddress()
+        public async override Task Initialize()
         {
-            var address = await HardwarewalletManager.GetAddressAsync(new AddressPath(true, 0, 0, false, 0), true);
-            Assert.Equal("1EdcJ3XAZ1jMHka8kwD6oyMkHuJC5qVu8p", address);
+            HardwarewalletManager = new DummyWalletManager();
         }
 
         [Fact]
