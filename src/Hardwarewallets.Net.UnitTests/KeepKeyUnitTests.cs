@@ -1,12 +1,12 @@
 ﻿using Hid.Net;
+using KeepKey.Net;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-using Trezor.Net;
 
 namespace Hardwarewallets.Net.UnitTests
 {
-    public class TrezorUnitTests : UnitTestBase
+    public class KeepKeyUnitTests : UnitTestBase
     {
         public override async Task Initialize()
         {
@@ -15,15 +15,15 @@ namespace Hardwarewallets.Net.UnitTests
                 return;
             }
 
-            var trezorHidDevice = await Connect();
-            var trezorManager = new TrezorManager(GetPin, trezorHidDevice);
-            await trezorManager.InitializeAsync();
-            HardwarewalletManager = new TrezorManagerWrapper(trezorManager);
+            var keepKeyDevice = await Connect();
+            var keepKeyManager = new KeepKeyManager(GetPin, keepKeyDevice);
+            await keepKeyManager.InitializeAsync();
+            HardwarewalletManager = new TrezorManagerWrapper(keepKeyManager);
         }
 
         private async Task<IHidDevice> Connect()
         {
-            DeviceInformation trezorDeviceInformation = null;
+            DeviceInformation keepKeyDeviceInformation = null;
 
             WindowsHidDevice retVal = null;
 
@@ -31,11 +31,12 @@ namespace Hardwarewallets.Net.UnitTests
 
             Console.Write("Waiting for Trezor .");
 
-            while (trezorDeviceInformation == null)
+            while (keepKeyDeviceInformation == null)
             {
                 var devices = WindowsHidDevice.GetConnectedDeviceInformations();
-                trezorDeviceInformation = devices.FirstOrDefault(d => d.VendorId == TrezorManager.TrezorVendorId && TrezorManager.TrezorProductId == d.ProductId);
-                if (trezorDeviceInformation != null)
+                keepKeyDeviceInformation = devices.FirstOrDefault(d => d.VendorId == KeepKeyManager.VendorId && KeepKeyManager.ProductId == d.ProductId);
+
+                if (keepKeyDeviceInformation != null)
                 {
                     break;
                 }
@@ -44,8 +45,8 @@ namespace Hardwarewallets.Net.UnitTests
                 Console.Write(".");
             }
 
-            retVal.DeviceInformation = trezorDeviceInformation;
-
+            retVal.DeviceInformation = keepKeyDeviceInformation;
+            retVal.DataHasExtraByte = false;
             await retVal.InitializeAsync();
 
             Console.WriteLine("Connected");

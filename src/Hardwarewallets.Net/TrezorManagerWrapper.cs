@@ -15,7 +15,7 @@ namespace Hardwarewallets.Net
             _TrezorManager = trezorManager;
         }
 
-        public Task<string> GetAddressAsync(IAddressPath addressPath, bool display)
+        public async Task<string> GetAddressAsync(IAddressPath addressPath, bool display)
         {
             string coinShortcut = null;
             if (addressPath.CoinType == 0)
@@ -27,12 +27,14 @@ namespace Hardwarewallets.Net
                 throw new NotImplementedException();
             }
 
-            return _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Change == 1 ? true : false, addressPath.AddressIndex, display, AddressType.Bitcoin);
+            var retVal = await _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Change == 1 ? true : false, addressPath.AddressIndex, display, AddressType.Bitcoin);
+
+            return retVal;
         }
 
         public async Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
         {
-            var publicKey =  await _TrezorManager.SendMessageAsync<PublicKey, GetPublicKey>(new GetPublicKey { AddressNs = addressPath.ToHardenedArray() });
+            var publicKey = await _TrezorManager.SendMessageAsync<PublicKey, GetPublicKey>(new GetPublicKey { AddressNs = addressPath.ToHardenedArray() });
             return publicKey.Xpub;
         }
 
