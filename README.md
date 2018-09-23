@@ -20,4 +20,5 @@ Current Hardwarewallets
 
 - Trezor
 - Ledger
+- KeepKey
 
