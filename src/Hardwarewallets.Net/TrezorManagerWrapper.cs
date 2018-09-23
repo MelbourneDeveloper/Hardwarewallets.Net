@@ -6,11 +6,11 @@ using Trezor.Net.Contracts;
 
 namespace Hardwarewallets.Net
 {
-    public class TrezorManagerWrapper : IHardwarewalletManager
+    public class TrezorManagerWrapper<T> : IHardwarewalletManager where T : TrezorManagerBase
     {
-        private TrezorManagerBase _TrezorManager;
+        private T _TrezorManager;
 
-        public TrezorManagerWrapper(TrezorManagerBase trezorManager)
+        public TrezorManagerWrapper(T trezorManager)
         {
             _TrezorManager = trezorManager;
         }
