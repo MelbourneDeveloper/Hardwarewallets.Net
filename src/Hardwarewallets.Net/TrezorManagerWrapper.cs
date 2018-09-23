@@ -2,6 +2,7 @@
 using System;
 using System.Threading.Tasks;
 using Trezor.Net;
+using Trezor.Net.Contracts;
 
 namespace Hardwarewallets.Net
 {
@@ -31,8 +32,8 @@ namespace Hardwarewallets.Net
 
         public async Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
         {
-            var asdasd =  await _TrezorManager.SendMessageAsync<Trezor.Net.Contracts.PublicKey, Trezor.Net.Contracts.GetPublicKey>(new Trezor.Net.Contracts.GetPublicKey { AddressNs = addressPath.ToHardenedArray() });
-            return asdasd.Xpub;
+            var publicKey =  await _TrezorManager.SendMessageAsync<PublicKey, GetPublicKey>(new GetPublicKey { AddressNs = addressPath.ToHardenedArray() });
+            return publicKey.Xpub;
         }
 
         public Task<T2> SignTransaction<T, T2>(T transaction)
