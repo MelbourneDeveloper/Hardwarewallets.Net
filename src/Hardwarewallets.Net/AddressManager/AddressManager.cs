@@ -63,6 +63,8 @@ namespace Hardwarewallets.Net.Addresses
                 //Create the result for the account
                 var accountResult = new AccountResult(account, addresses, changeAddresses);
 
+                retVal.Accounts.Add(accountResult);
+
                 //Iterate through address indexes
                 for (var i = 0; i < numberOfAddresses; i++)
                 {

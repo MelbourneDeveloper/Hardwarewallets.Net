@@ -27,7 +27,7 @@ namespace Hardwarewallets.Net
                 throw new NotImplementedException();
             }
 
-            return _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Change == 1 ? true : false, addressPath.AddressIndex, true, AddressType.Bitcoin);
+            return _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Change == 1 ? true : false, addressPath.AddressIndex, display, AddressType.Bitcoin);
         }
 
         public async Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
