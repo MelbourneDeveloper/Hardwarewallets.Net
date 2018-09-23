@@ -1,4 +1,5 @@
-﻿using Hid.Net;
+﻿using Hardwarewallets.Net.Addresses;
+using Hid.Net;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -35,7 +36,7 @@ namespace Hardwarewallets.Net.UnitTests
             {
                 var devices = WindowsHidDevice.GetConnectedDeviceInformations();
                 var trezors = devices.Where(d => d.VendorId == TrezorManager.TrezorVendorId && TrezorManager.TrezorProductId == 1).ToList();
-                trezorDeviceInformation = trezors.FirstOrDefault();
+                trezorDeviceInformation = trezors.FirstOrDefault(t => t.Product == TrezorManager.USBOneName);
 
                 if (trezorDeviceInformation != null)
                 {

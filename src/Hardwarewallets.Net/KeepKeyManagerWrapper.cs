@@ -12,7 +12,7 @@ namespace Hardwarewallets.Net
         {
         }
 
-        protected override Task<string> GetAddress(IAddressPath addressPath, bool display, string coinShortcut)
+        protected override Task<string> GetAddressAsync(IAddressPath addressPath, bool display, string coinShortcut)
         {
             return _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Account, addressPath.Change == 1, addressPath.AddressIndex, display, AddressType.Bitcoin, false);
         }
