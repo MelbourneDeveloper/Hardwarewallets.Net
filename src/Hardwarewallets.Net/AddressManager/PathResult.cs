@@ -1,11 +1,11 @@
 ﻿namespace Hardwarewallets.Net.Addresses
 {
-    public class PathInformation
+    public class PathResult
     {
         string PublicKey { get; }
         string Address { get; }
 
-        public PathInformation(string publicKey, string address)
+        public PathResult(string publicKey, string address)
         {
             PublicKey = publicKey;
             Address = address;

@@ -32,25 +32,35 @@ namespace Hardwarewallets.Net.Addresses
         {
             var retVal = new GetAddressesResult();
 
+            //Iterate through accounts
             for (uint account = 0; account < numberOfAccounts + numberOfAddresses; account++)
             {
-                var addresses = new List<PathInformation>();
-                List<PathInformation> changeAddresses = null;
+                var addresses = new List<PathResult>();
+                List<PathResult> changeAddresses = null;
                 if (includeChangeAddresses)
                 {
-                    changeAddresses = new List<PathInformation>(numberOfAddresses);
+                    changeAddresses = new List<PathResult>();
                 }
 
-                for (uint i = 0; i < numberOfAddresses; i++)
+                //Create the result for the account
+                var accountResult = new AccountResult(account, addresses, changeAddresses);
+
+                //Iterate through address indexes
+                for (var i = 0; i < numberOfAddresses; i++)
                 {
-                    var accountResult = new AccountResult(account, addresses, changeAddresses);
 
-                    var addressPath = AddressPathFactory.GetAddressPath(0, account, startIndex + i);
+                    var addressPath = AddressPathFactory.GetAddressPath(0, account, startIndex + (uint)i);
+
                     var address = await HardwarewalletManager.GetAddressAsync(AddressPathFactory.GetAddressPath(0, account, startIndex + i), false);
-                    
+
+                    string publicKey = null;
+                    if (includePublicKeys)
+                    {
+                        publicKey = await HardwarewalletManager.GetPublicKeyAsync(addressPath, false);
+                    }
+
+                    accountResult.Addresses.Add(new PathResult(publicKey, address));
                 }
-
-
             }
         }
     }
