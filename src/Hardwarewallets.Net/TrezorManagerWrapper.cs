@@ -6,15 +6,30 @@ using Trezor.Net.Contracts;
 
 namespace Hardwarewallets.Net
 {
+    /// <summary>
+    /// TODO: This should be abstract
+    /// </summary>
     public class TrezorManagerWrapper<T> : IHardwarewalletManager where T : TrezorManagerBase
     {
-        private T _TrezorManager;
+        #region Fields
+        protected T _TrezorManager;
+        #endregion
 
+        #region Constructor
         public TrezorManagerWrapper(T trezorManager)
         {
             _TrezorManager = trezorManager;
         }
+        #endregion
 
+        #region Protected Methods
+        protected virtual async Task<string> GetAddress(IAddressPath addressPath, bool display, string coinShortcut)
+        {
+            return await _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Change == 1 ? true : false, addressPath.AddressIndex, display, AddressType.Bitcoin);
+        }
+        #endregion
+
+        #region Public Methods (Implementation)
         public async Task<string> GetAddressAsync(IAddressPath addressPath, bool display)
         {
             string coinShortcut = null;
@@ -27,12 +42,15 @@ namespace Hardwarewallets.Net
                 throw new NotImplementedException();
             }
 
-            var retVal = await _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Change == 1 ? true : false, addressPath.AddressIndex, display, AddressType.Bitcoin);
+            var retVal = await GetAddress(addressPath, display, coinShortcut);
 
             return retVal;
         }
 
-        public async Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
+        /// <summary>
+        /// TODO: This should be abstract
+        /// </summary>
+        public virtual async Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
         {
             var publicKey = await _TrezorManager.SendMessageAsync<PublicKey, GetPublicKey>(new GetPublicKey { AddressNs = addressPath.ToHardenedArray() });
             return publicKey.Xpub;
@@ -44,5 +62,6 @@ namespace Hardwarewallets.Net
         {
             throw new NotImplementedException();
         }
+        #endregion
     }
 }

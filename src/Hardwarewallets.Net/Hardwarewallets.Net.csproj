@@ -26,4 +26,10 @@
     <ProjectReference Include="..\Hardwarewallets.Net.Base\Hardwarewallets.Net.Base.csproj" />
   </ItemGroup>
 
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="KeepKey.Net">
+      <Version>1.5.2</Version>
+    </PackageReference>
+  </ItemGroup>
+
 </Project>

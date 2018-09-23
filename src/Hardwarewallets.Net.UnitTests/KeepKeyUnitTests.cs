@@ -18,7 +18,7 @@ namespace Hardwarewallets.Net.UnitTests
             var keepKeyDevice = await Connect();
             var keepKeyManager = new KeepKeyManager(GetPin, keepKeyDevice);
             await keepKeyManager.InitializeAsync();
-            HardwarewalletManager = new TrezorManagerWrapper(keepKeyManager);
+            HardwarewalletManager = new KeepKeyManagerWrapper(keepKeyManager);
         }
 
         private async Task<IHidDevice> Connect()
