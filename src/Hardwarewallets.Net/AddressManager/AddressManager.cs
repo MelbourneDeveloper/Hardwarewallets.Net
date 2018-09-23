@@ -28,6 +28,24 @@ namespace Hardwarewallets.Net.Addresses
         }
         #endregion
 
+        #region Private Methods
+        private async Task<PathResult> GetPathResult(bool includePublicKeys, uint account, uint index, bool isChange)
+        {
+            var addressPath = AddressPathFactory.GetAddressPath(0, account, index);
+
+            var address = await HardwarewalletManager.GetAddressAsync(AddressPathFactory.GetAddressPath((uint)(isChange ? 1 : 0), account, index), false);
+
+            string publicKey = null;
+            if (includePublicKeys)
+            {
+                publicKey = await HardwarewalletManager.GetPublicKeyAsync(addressPath, false);
+            }
+
+            return new PathResult(publicKey, address);
+        }
+        #endregion
+
+        #region Public Methods
         public async Task<GetAddressesResult> GetAddressesAsync(uint startIndex, int numberOfAddresses, int numberOfAccounts, bool includeChangeAddresses, bool includePublicKeys)
         {
             var retVal = new GetAddressesResult();
@@ -49,21 +67,18 @@ namespace Hardwarewallets.Net.Addresses
                 for (var i = 0; i < numberOfAddresses; i++)
                 {
                     var index = startIndex + (uint)i;
-                    var addressPath = AddressPathFactory.GetAddressPath(0, account, index);
 
-                    var address = await HardwarewalletManager.GetAddressAsync(AddressPathFactory.GetAddressPath(0, account, index), false);
+                    accountResult.Addresses.Add(await GetPathResult(includePublicKeys, account, index, false));
 
-                    string publicKey = null;
-                    if (includePublicKeys)
+                    if(includeChangeAddresses)
                     {
-                        publicKey = await HardwarewalletManager.GetPublicKeyAsync(addressPath, false);
+                        accountResult.ChangeAddresses.Add(await GetPathResult(includePublicKeys, account, index, true));
                     }
-
-                    accountResult.Addresses.Add(new PathResult(publicKey, address));
                 }
             }
 
             return retVal;
         }
+        #endregion
     }
 }
