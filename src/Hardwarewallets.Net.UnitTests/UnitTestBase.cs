@@ -37,7 +37,6 @@ namespace Hardwarewallets.Net.UnitTests
             Assert.True(addresses.Accounts[1].Addresses.Count == numberOfAddresses);
             Assert.True(addresses.Accounts[0].ChangeAddresses.Count == numberOfAddresses);
             Assert.True(addresses.Accounts[1].ChangeAddresses.Count == numberOfAddresses);
-
         }
     }
 }
