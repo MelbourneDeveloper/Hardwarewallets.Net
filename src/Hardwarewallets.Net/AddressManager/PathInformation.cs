@@ -1,4 +1,4 @@
-﻿namespace Hardwarewallets.Net
+﻿namespace Hardwarewallets.Net.Addresses
 {
     public class PathInformation
     {

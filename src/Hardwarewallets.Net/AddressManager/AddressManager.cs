@@ -1,15 +1,14 @@
 ﻿using Hardwarewallets.Net.Base;
 using System.Collections.Generic;
 
-namespace Hardwarewallets.Net
+namespace Hardwarewallets.Net.Addresses
 {
     public class AddressManager
     {
         #region Public Properties
         public IHardwarewalletManager HardwarewalletManager { get; }
-        private uint Purpose { get;  }
+        private uint Purpose { get; }
         private uint CoinType { get; }
-        private IEnumerable<uint> Accounts { get; }
         #endregion
 
         #region Constructor
@@ -19,17 +18,24 @@ namespace Hardwarewallets.Net
             HardwarewalletManager = hardwarewalletManager;
         }
 
-        public AddressManager(IHardwarewalletManager hardwarewalletManager, bool isSegit, uint cointType, IEnumerable<uint> accounts) : this(hardwarewalletManager)
+        public AddressManager(IHardwarewalletManager hardwarewalletManager, bool isSegit, uint cointType) : this(hardwarewalletManager)
         {
             Purpose = isSegit ? (uint)49 : 44;
             CoinType = cointType;
-            Accounts = accounts;
         }
         #endregion
 
-        public GetAddressesResult GetAddressesAsync(uint startIndex, int numberOfAddresses, bool includeChangeAddresses, bool includePublicKeys)
+        public GetAddressesResult GetAddressesAsync(uint startIndex, int numberOfAddresses, int numberOfAccounts, bool includeChangeAddresses, bool includePublicKeys)
         {
+            var retVal = new GetAddressesResult();
 
+            for (uint account = 0; account < numberOfAccounts + numberOfAddresses; account++)
+            {
+                for (uint index = startIndex; index < startIndex + numberOfAddresses; index++)
+                {
+                    var accountResult = new AccountResult(account);
+                }
+            }
         }
     }
 }

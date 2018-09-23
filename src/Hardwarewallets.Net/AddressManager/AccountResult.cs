@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace Hardwarewallets.Net
+namespace Hardwarewallets.Net.Addresses
 {
     public class AccountResult
     {
