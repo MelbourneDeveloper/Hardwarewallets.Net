@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <PackageReference Include="LedgerWallet" Version="2.0.0.1" />
-    <PackageReference Include="Trezor.Net" Version="1.5.1" />
+    <PackageReference Include="Trezor.Net" Version="1.5.2" />
   </ItemGroup>
 
   <ItemGroup>
