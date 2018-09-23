@@ -34,7 +34,9 @@ namespace Hardwarewallets.Net.UnitTests
             while (trezorDeviceInformation == null)
             {
                 var devices = WindowsHidDevice.GetConnectedDeviceInformations();
-                trezorDeviceInformation = devices.FirstOrDefault(d => d.VendorId == TrezorManager.TrezorVendorId && TrezorManager.TrezorProductId == d.ProductId);
+                var trezors = devices.Where(d => d.VendorId == TrezorManager.TrezorVendorId && TrezorManager.TrezorProductId == 1).ToList();
+                trezorDeviceInformation = trezors.FirstOrDefault();
+
                 if (trezorDeviceInformation != null)
                 {
                     break;
