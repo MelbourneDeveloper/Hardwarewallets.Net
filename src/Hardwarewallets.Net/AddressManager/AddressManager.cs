@@ -48,10 +48,10 @@ namespace Hardwarewallets.Net.Addresses
                 //Iterate through address indexes
                 for (var i = 0; i < numberOfAddresses; i++)
                 {
+                    var index = startIndex + (uint)i;
+                    var addressPath = AddressPathFactory.GetAddressPath(0, account, index);
 
-                    var addressPath = AddressPathFactory.GetAddressPath(0, account, startIndex + (uint)i);
-
-                    var address = await HardwarewalletManager.GetAddressAsync(AddressPathFactory.GetAddressPath(0, account, startIndex + i), false);
+                    var address = await HardwarewalletManager.GetAddressAsync(AddressPathFactory.GetAddressPath(0, account, index), false);
 
                     string publicKey = null;
                     if (includePublicKeys)
@@ -62,6 +62,8 @@ namespace Hardwarewallets.Net.Addresses
                     accountResult.Addresses.Add(new PathResult(publicKey, address));
                 }
             }
+
+            return retVal;
         }
     }
 }
