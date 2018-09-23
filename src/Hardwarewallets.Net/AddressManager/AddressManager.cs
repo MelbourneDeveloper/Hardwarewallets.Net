@@ -31,9 +31,9 @@ namespace Hardwarewallets.Net.Addresses
         #region Private Methods
         private async Task<PathResult> GetPathResult(bool includePublicKeys, uint account, uint index, bool isChange)
         {
-            var addressPath = AddressPathFactory.GetAddressPath(0, account, index);
+            var addressPath = AddressPathFactory.GetAddressPath((uint)(isChange ? 1 : 0), account, index);
 
-            var address = await HardwarewalletManager.GetAddressAsync(AddressPathFactory.GetAddressPath((uint)(isChange ? 1 : 0), account, index), false);
+            var address = await HardwarewalletManager.GetAddressAsync(addressPath, false);
 
             string publicKey = null;
             if (includePublicKeys)
@@ -51,7 +51,7 @@ namespace Hardwarewallets.Net.Addresses
             var retVal = new GetAddressesResult();
 
             //Iterate through accounts
-            for (uint account = 0; account < numberOfAccounts + numberOfAddresses; account++)
+            for (uint account = 0; account < numberOfAccounts; account++)
             {
                 var addresses = new List<PathResult>();
                 List<PathResult> changeAddresses = null;
@@ -72,7 +72,7 @@ namespace Hardwarewallets.Net.Addresses
 
                     accountResult.Addresses.Add(await GetPathResult(includePublicKeys, account, index, false));
 
-                    if(includeChangeAddresses)
+                    if (includeChangeAddresses)
                     {
                         accountResult.ChangeAddresses.Add(await GetPathResult(includePublicKeys, account, index, true));
                     }

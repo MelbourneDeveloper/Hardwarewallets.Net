@@ -27,12 +27,12 @@ namespace Hardwarewallets.Net.UnitTests
 
             //Get 10 addresses with all the trimming
             const int numberOfAddresses = 3;
-            const int NumberOfAccounts = 2;
-            var addresses = await addressManager.GetAddressesAsync(0, numberOfAddresses, NumberOfAccounts, true, true);
+            const int numberOfAccounts = 2;
+            var addresses = await addressManager.GetAddressesAsync(0, numberOfAddresses, numberOfAccounts, true, true);
 
             Assert.True(addresses != null);
             Assert.True(addresses.Accounts != null);
-            Assert.True(addresses.Accounts.Count == NumberOfAccounts);
+            Assert.True(addresses.Accounts.Count == numberOfAccounts);
             Assert.True(addresses.Accounts[0].Addresses.Count == numberOfAddresses);
             Assert.True(addresses.Accounts[1].Addresses.Count == numberOfAddresses);
             Assert.True(addresses.Accounts[0].ChangeAddresses.Count == numberOfAddresses);
