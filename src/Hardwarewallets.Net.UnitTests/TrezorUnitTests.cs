@@ -1,4 +1,5 @@
-﻿using Hid.Net;
+﻿using Hardwarewallets.Net.Addresses;
+using Hid.Net;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
