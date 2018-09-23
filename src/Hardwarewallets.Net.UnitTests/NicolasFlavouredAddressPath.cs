@@ -1,5 +1,6 @@
 ﻿using Hardwarewallets.Net.Base;
 using NBitcoin;
+using System;
 
 namespace Hardwarewallets.Net
 {
@@ -22,6 +23,16 @@ namespace Hardwarewallets.Net
         public NicolasFlavouredAddressPath(KeyPath keyPath)
         {
             KeyPath = keyPath;
+        }
+
+        public uint[] ToUnhardenedArray()
+        {
+            throw new NotImplementedException();
+        }
+
+        public uint[] ToHardenedArray()
+        {
+            return new uint[5] { Purpose, CoinType, Account, Change, AddressIndex };
         }
     }
 }

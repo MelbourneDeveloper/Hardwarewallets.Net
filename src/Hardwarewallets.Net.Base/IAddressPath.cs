@@ -10,5 +10,7 @@
         uint Account { get; }
         uint Change { get; }
         uint AddressIndex { get; }
+        uint[] ToUnhardenedArray();
+        uint[] ToHardenedArray();
     }
 }

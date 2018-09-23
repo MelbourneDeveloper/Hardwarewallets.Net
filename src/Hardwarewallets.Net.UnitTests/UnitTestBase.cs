@@ -23,10 +23,20 @@ namespace Hardwarewallets.Net.UnitTests
         {
             await Initialize();
 
-            var AddressManager = new AddressManager(HardwarewalletManager, new AddressPathFactory(true, 0));
+            var addressManager = new AddressManager(HardwarewalletManager, new AddressPathFactory(true, 0));
 
             //Get 10 addresses with all the trimming
-            var addresses = await AddressManager.GetAddressesAsync(0, 10, 2, true, true);
+            const int numberOfAddresses = 10;
+            var addresses = await addressManager.GetAddressesAsync(0, numberOfAddresses, 2, true, true);
+
+            Assert.True(addresses != null);
+            Assert.True(addresses.Accounts != null);
+            Assert.True(addresses.Accounts.Count == 2);
+            Assert.True(addresses.Accounts[0].Addresses.Count == numberOfAddresses);
+            Assert.True(addresses.Accounts[1].Addresses.Count == numberOfAddresses);
+            Assert.True(addresses.Accounts[0].ChangeAddresses.Count == numberOfAddresses);
+            Assert.True(addresses.Accounts[1].ChangeAddresses.Count == numberOfAddresses);
+
         }
     }
 }

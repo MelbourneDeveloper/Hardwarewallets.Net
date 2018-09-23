@@ -29,9 +29,10 @@ namespace Hardwarewallets.Net
             return _TrezorManager.GetAddressAsync(coinShortcut, addressPath.CoinType, addressPath.Change == 1 ? true : false, addressPath.AddressIndex, true, AddressType.Bitcoin);
         }
 
-        public Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
+        public async Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
         {
-            throw new NotImplementedException();
+            var asdasd =  await _TrezorManager.SendMessageAsync<Trezor.Net.Contracts.PublicKey, Trezor.Net.Contracts.GetPublicKey>(new Trezor.Net.Contracts.GetPublicKey { AddressNs = addressPath.ToHardenedArray() });
+            return asdasd.Xpub;
         }
 
         public Task<T2> SignTransaction<T, T2>(T transaction)
