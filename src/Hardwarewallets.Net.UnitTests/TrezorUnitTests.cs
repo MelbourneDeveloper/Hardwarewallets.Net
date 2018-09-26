@@ -10,7 +10,7 @@ namespace Hardwarewallets.Net.UnitTests
     {
         public override async Task Initialize()
         {
-            if (HardwarewalletManager != null)
+            if (AddressDeriver != null)
             {
                 return;
             }
@@ -18,7 +18,7 @@ namespace Hardwarewallets.Net.UnitTests
             var trezorHidDevice = await Connect();
             var trezorManager = new TrezorManager(GetPin, trezorHidDevice);
             await trezorManager.InitializeAsync();
-            HardwarewalletManager = new TrezorManagerWrapper<TrezorManager>(trezorManager);
+            AddressDeriver = new TrezorManagerWrapper<TrezorManager>(trezorManager);
         }
 
         private async Task<IHidDevice> Connect()

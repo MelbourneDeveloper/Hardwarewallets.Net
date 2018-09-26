@@ -10,7 +10,7 @@ namespace Hardwarewallets.Net.UnitTests
     {
         public override async Task Initialize()
         {
-            if (HardwarewalletManager != null)
+            if (AddressDeriver != null)
             {
                 return;
             }
@@ -18,7 +18,7 @@ namespace Hardwarewallets.Net.UnitTests
             var keepKeyDevice = await Connect();
             var keepKeyManager = new KeepKeyManager(GetPin, keepKeyDevice);
             await keepKeyManager.InitializeAsync();
-            HardwarewalletManager = new KeepKeyManagerWrapper(keepKeyManager);
+            AddressDeriver = new KeepKeyManagerWrapper(keepKeyManager);
         }
 
         private async Task<IHidDevice> Connect()

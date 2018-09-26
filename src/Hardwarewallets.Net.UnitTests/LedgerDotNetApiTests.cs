@@ -9,7 +9,7 @@ namespace Hardwarewallets.Net.UnitTests
         public override async Task Initialize()
         {
             var ledgerClient = (await LedgerClient.GetHIDLedgersAsync()).First();
-            HardwarewalletManager = new LedgerDotNetApiWrapper(ledgerClient);
+            AddressDeriver = new LedgerDotNetApiWrapper(ledgerClient);
         }
     }
 }

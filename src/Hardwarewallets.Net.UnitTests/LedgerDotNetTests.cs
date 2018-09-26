@@ -10,14 +10,14 @@ namespace Hardwarewallets.Net.UnitTests
     {
         public override async Task Initialize()
         {
-            if (HardwarewalletManager != null)
+            if (AddressDeriver != null)
             {
                 return;
             }
 
             var ledgerDevice = await Connect();
             var ledgerManager = new LedgerManager(ledgerDevice);
-            HardwarewalletManager = new LedgerManagerWrapper(ledgerManager);
+            AddressDeriver = new LedgerManagerWrapper(ledgerManager);
         }
 
         private async Task<IHidDevice> Connect()
