@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace Hardwarewallets.Net.Base.Ethereum
+namespace Hardwarewallets.Net.Model
 {
     public interface IEthereumTransaction : ITransaction
     {

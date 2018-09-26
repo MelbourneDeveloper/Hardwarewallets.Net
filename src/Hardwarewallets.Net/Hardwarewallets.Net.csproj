@@ -17,20 +17,4 @@
     <OutputPath>C:\GitRepos\Hardwarewallets.Net\NuGet\</OutputPath>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Ledger.Net" Version="1.3.1" />
-    <PackageReference Include="LedgerWallet" Version="2.0.0.1" />
-    <PackageReference Include="Trezor.Net" Version="1.5.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Hardwarewallets.Net.Base\Hardwarewallets.Net.Base.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="KeepKey.Net">
-      <Version>1.5.2</Version>
-    </PackageReference>
-  </ItemGroup>
-
 </Project>

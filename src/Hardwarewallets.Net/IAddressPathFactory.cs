@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Hardwarewallets.Net.Model;
 
-namespace Hardwarewallets.Net.Base
+namespace Hardwarewallets.Net
 {
     public interface IAddressPathFactory
     {

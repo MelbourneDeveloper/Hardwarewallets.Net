@@ -1,6 +1,6 @@
-﻿using Hardwarewallets.Net.Base;
+﻿using Hardwarewallets.Net.Model;
 
-namespace Hardwarewallets.Net
+namespace Hardwarewallets.Net.AddressManagement
 {
     public class AddressPath : IAddressPath
     {

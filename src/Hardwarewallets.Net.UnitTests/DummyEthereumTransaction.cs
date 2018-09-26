@@ -1,5 +1,5 @@
-﻿using Hardwarewallets.Net.Base;
-using Hardwarewallets.Net.Base.Ethereum;
+﻿using Hardwarewallets.Net.AddressManagement;
+using Hardwarewallets.Net.Model;
 using System.Numerics;
 
 namespace Hardwarewallets.Net.UnitTests

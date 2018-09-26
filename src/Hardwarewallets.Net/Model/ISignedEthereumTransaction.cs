@@ -1,4 +1,6 @@
-﻿namespace Hardwarewallets.Net.Base.Ethereum
+﻿using Hardwarewallets.Net.Model;
+
+namespace Hardwarewallets.Net.Model
 {
     public interface ISignedEthereumTransaction : ISignedTransaction
     {

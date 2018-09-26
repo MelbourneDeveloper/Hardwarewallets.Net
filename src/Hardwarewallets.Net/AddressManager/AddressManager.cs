@@ -1,13 +1,12 @@
-﻿using Hardwarewallets.Net.Base;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Hardwarewallets.Net.Addresses
+namespace Hardwarewallets.Net.AddressManagement
 {
     public class AddressManager
     {
         #region Public Properties
-        public IHardwarewalletManager HardwarewalletManager { get; }
+        public IAddressDeriver HardwarewalletManager { get; }
         public IAddressPathFactory AddressPathFactory { get; }
         private uint Purpose { get; }
         private uint CoinType { get; }
@@ -15,13 +14,13 @@ namespace Hardwarewallets.Net.Addresses
 
         #region Constructor
 
-        public AddressManager(IHardwarewalletManager hardwarewalletManager, IAddressPathFactory addressPathFactory)
+        public AddressManager(IAddressDeriver hardwarewalletManager, IAddressPathFactory addressPathFactory)
         {
             HardwarewalletManager = hardwarewalletManager;
             AddressPathFactory = addressPathFactory;
         }
 
-        public AddressManager(IHardwarewalletManager hardwarewalletManager, IAddressPathFactory addressPathFactory, bool isSegit, uint cointType) : this(hardwarewalletManager, addressPathFactory)
+        public AddressManager(IAddressDeriver hardwarewalletManager, IAddressPathFactory addressPathFactory, bool isSegit, uint cointType) : this(hardwarewalletManager, addressPathFactory)
         {
             Purpose = isSegit ? (uint)49 : 44;
             CoinType = cointType;
@@ -33,12 +32,12 @@ namespace Hardwarewallets.Net.Addresses
         {
             var addressPath = AddressPathFactory.GetAddressPath((uint)(isChange ? 1 : 0), account, index);
 
-            var address = await HardwarewalletManager.GetAddressAsync(addressPath, false);
+            var address = await HardwarewalletManager.GetAddressAsync(addressPath, false, false);
 
             string publicKey = null;
             if (includePublicKeys)
             {
-                publicKey = await HardwarewalletManager.GetPublicKeyAsync(addressPath, false);
+                publicKey = await HardwarewalletManager.GetAddressAsync(addressPath, true, false);
             }
 
             return new PathResult(publicKey, address);

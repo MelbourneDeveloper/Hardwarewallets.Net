@@ -1,4 +1,4 @@
-﻿namespace Hardwarewallets.Net.Addresses
+﻿namespace Hardwarewallets.Net.AddressManagement
 {
     public class PathResult
     {

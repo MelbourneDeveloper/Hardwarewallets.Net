@@ -1,4 +1,4 @@
-﻿using Hardwarewallets.Net.Base;
+﻿using Hardwarewallets.Net.Model;
 using NBitcoin;
 using System;
 

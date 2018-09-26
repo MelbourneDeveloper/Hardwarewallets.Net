@@ -1,4 +1,4 @@
-﻿namespace Hardwarewallets.Net.Base
+﻿namespace Hardwarewallets.Net.Model
 {
     public interface ITransaction
     {

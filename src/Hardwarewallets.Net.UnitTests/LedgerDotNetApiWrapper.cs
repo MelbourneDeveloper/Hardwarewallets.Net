@@ -1,4 +1,4 @@
-﻿using Hardwarewallets.Net.Base;
+﻿using Hardwarewallets.Net.Model;
 using LedgerWallet;
 using NBitcoin;
 using System;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hardwarewallets.Net
 {
-    public class LedgerDotNetApiWrapper : IHardwarewalletManager
+    public class LedgerDotNetApiWrapper : IAddressDeriver, ITransactionSigner
     {
         #region Fields
         private LedgerClient _LedgerClient;
@@ -20,16 +20,10 @@ namespace Hardwarewallets.Net
         #endregion
 
         #region Public Methods
-        public async Task<string> GetAddressAsync(IAddressPath addressPath, bool display)
+        public async Task<string> GetAddressAsync(IAddressPath addressPath, bool isPublicKey, bool display)
         {
             var response = await GetPublicKey(addressPath, display);
-            return response.Address;
-        }
-
-        public async Task<string> GetPublicKeyAsync(IAddressPath addressPath, bool display)
-        {
-            var response = await GetPublicKey(addressPath, display);
-            return response.UncompressedPublicKey.ToHex();
+            return isPublicKey ? response.UncompressedPublicKey.ToHex() : response.Address;
         }
 
         public Task<T2> SignTransaction<T, T2>(T transaction)
