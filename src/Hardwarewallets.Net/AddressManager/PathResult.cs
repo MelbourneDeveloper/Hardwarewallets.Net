@@ -2,8 +2,8 @@
 {
     public class PathResult
     {
-        string PublicKey { get; }
-        string Address { get; }
+        public string PublicKey { get; }
+        public string Address { get; }
 
         public PathResult(string publicKey, string address)
         {
