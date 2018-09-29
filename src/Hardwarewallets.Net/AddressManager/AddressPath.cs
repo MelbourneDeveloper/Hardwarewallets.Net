@@ -16,10 +16,10 @@ namespace Hardwarewallets.Net.AddressManagement
 
         public uint AddressIndex { get; }
 
-        public AddressPath(bool isSegwit, uint cointType, uint account, bool isChange, uint addressIndex)
+        public AddressPath(bool isSegwit, uint coinType, uint account, bool isChange, uint addressIndex)
         {
             Purpose = isSegwit ? (uint)49 : 44;
-            CoinType = cointType;
+            CoinType = coinType;
             Account = account;
             Change = isChange ? 1 : (uint)0;
             AddressIndex = addressIndex;

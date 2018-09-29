@@ -2,11 +2,18 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net/blob/master/LICENSE</PackageLicenseUrl>
     <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
-    <Version>0.1.0</Version>
+    <Version>1.0.0</Version>
+    <Authors>Christian Findlay</Authors>
+    <Description>Cross platform, base C# library for all Hardwarewallets. Provides simple interfaces that sit underneath all hardwarewallet libraries, and utilitiy classes that sit over the top all libraries</Description>
+    <Copyright>Christian Findlay</Copyright>
+    <PackageProjectUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net</RepositoryUrl>
+    <PackageTags>Hardwarewallet Trezor KeepKey Ledger Bitcoin Ethereum</PackageTags>
+    <PackageReleaseNotes>First release of interfaces and utility classes for getting addresses</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
@@ -16,5 +23,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
     <OutputPath>C:\GitRepos\Hardwarewallets.Net\NuGet\</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ITransactionSigner.cs" />
+  </ItemGroup>
 
 </Project>

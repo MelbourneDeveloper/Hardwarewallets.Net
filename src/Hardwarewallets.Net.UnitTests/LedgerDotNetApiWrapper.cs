@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hardwarewallets.Net
 {
-    public class LedgerDotNetApiWrapper : IAddressDeriver, ITransactionSigner
+    public class LedgerDotNetApiWrapper : IAddressDeriver
     {
         #region Fields
         private LedgerClient _LedgerClient;
@@ -26,12 +26,12 @@ namespace Hardwarewallets.Net
             return isPublicKey ? response.UncompressedPublicKey.ToHex() : response.Address;
         }
 
-        public Task<T2> SignTransaction<T, T2>(T transaction)
-            where T : ITransaction
-            where T2 : ISignedTransaction
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<T2> SignTransaction<T, T2>(T transaction)
+        //    where T : ITransaction
+        //    where T2 : ISignedTransaction
+        //{
+        //    throw new NotImplementedException();
+        //}
         #endregion
 
         #region Private Methods

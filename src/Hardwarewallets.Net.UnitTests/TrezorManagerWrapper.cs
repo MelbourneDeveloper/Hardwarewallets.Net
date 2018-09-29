@@ -6,7 +6,7 @@ using Trezor.Net.Contracts;
 
 namespace Hardwarewallets.Net
 {
-    public class TrezorManagerWrapper<T> : IAddressDeriver, ITransactionSigner where T : TrezorManagerBase
+    public class TrezorManagerWrapper<T> : IAddressDeriver where T : TrezorManagerBase
     {
         protected T _TrezorManager;
 
@@ -39,11 +39,11 @@ namespace Hardwarewallets.Net
             }
         }
 
-        public Task<T2> SignTransaction<T, T2>(T transaction)
-            where T : ITransaction
-            where T2 : ISignedTransaction
-        {
-            throw new NotImplementedException();
-        }
+        //public Task<T2> SignTransaction<T, T2>(T transaction)
+        //    where T : ITransaction
+        //    where T2 : ISignedTransaction
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }
