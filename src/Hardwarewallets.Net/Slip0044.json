@@ -1,0 +1,1322 @@
+[
+  {
+    "CoinType": 0,
+    "CoinShortcut": "BTC"
+  },
+  {
+    "CoinType": 2,
+    "CoinShortcut": "LTC"
+  },
+  {
+    "CoinType": 3,
+    "CoinShortcut": "DOGE"
+  },
+  {
+    "CoinType": 4,
+    "CoinShortcut": "RDD"
+  },
+  {
+    "CoinType": 5,
+    "CoinShortcut": "DSH"
+  },
+  {
+    "CoinType": 6,
+    "CoinShortcut": "PPC"
+  },
+  {
+    "CoinType": 7,
+    "CoinShortcut": "NMC"
+  },
+  {
+    "CoinType": 8,
+    "CoinShortcut": "FTC"
+  },
+  {
+    "CoinType": 9,
+    "CoinShortcut": "XCP"
+  },
+  {
+    "CoinType": 10,
+    "CoinShortcut": "BLK"
+  },
+  {
+    "CoinType": 11,
+    "CoinShortcut": "NSR"
+  },
+  {
+    "CoinType": 12,
+    "CoinShortcut": "NBT"
+  },
+  {
+    "CoinType": 13,
+    "CoinShortcut": "MZC"
+  },
+  {
+    "CoinType": 14,
+    "CoinShortcut": "VIA"
+  },
+  {
+    "CoinType": 15,
+    "CoinShortcut": "XCH"
+  },
+  {
+    "CoinType": 16,
+    "CoinShortcut": "RBY"
+  },
+  {
+    "CoinType": 17,
+    "CoinShortcut": "GRS"
+  },
+  {
+    "CoinType": 18,
+    "CoinShortcut": "DGC"
+  },
+  {
+    "CoinType": 19,
+    "CoinShortcut": "CCN"
+  },
+  {
+    "CoinType": 20,
+    "CoinShortcut": "DGB"
+  },
+  {
+    "CoinType": 22,
+    "CoinShortcut": "MONA"
+  },
+  {
+    "CoinType": 23,
+    "CoinShortcut": "CLAM"
+  },
+  {
+    "CoinType": 24,
+    "CoinShortcut": "XPM"
+  },
+  {
+    "CoinType": 25,
+    "CoinShortcut": "NEOS"
+  },
+  {
+    "CoinType": 26,
+    "CoinShortcut": "JBS"
+  },
+  {
+    "CoinType": 27,
+    "CoinShortcut": "ZRC"
+  },
+  {
+    "CoinType": 28,
+    "CoinShortcut": "VTC"
+  },
+  {
+    "CoinType": 29,
+    "CoinShortcut": "NXT"
+  },
+  {
+    "CoinType": 30,
+    "CoinShortcut": "BURST"
+  },
+  {
+    "CoinType": 31,
+    "CoinShortcut": "MUE"
+  },
+  {
+    "CoinType": 32,
+    "CoinShortcut": "ZOOM"
+  },
+  {
+    "CoinType": 33,
+    "CoinShortcut": "VASH"
+  },
+  {
+    "CoinType": 34,
+    "CoinShortcut": "CDN"
+  },
+  {
+    "CoinType": 35,
+    "CoinShortcut": "SDC"
+  },
+  {
+    "CoinType": 36,
+    "CoinShortcut": "PKB"
+  },
+  {
+    "CoinType": 37,
+    "CoinShortcut": "PND"
+  },
+  {
+    "CoinType": 38,
+    "CoinShortcut": "START"
+  },
+  {
+    "CoinType": 39,
+    "CoinShortcut": "MOIN"
+  },
+  {
+    "CoinType": 40,
+    "CoinShortcut": "EXP"
+  },
+  {
+    "CoinType": 41,
+    "CoinShortcut": "EMC2"
+  },
+  {
+    "CoinType": 42,
+    "CoinShortcut": "DCR"
+  },
+  {
+    "CoinType": 43,
+    "CoinShortcut": "XEM"
+  },
+  {
+    "CoinType": 44,
+    "CoinShortcut": "PART"
+  },
+  {
+    "CoinType": 45,
+    "CoinShortcut": "ARG"
+  },
+  {
+    "CoinType": 48,
+    "CoinShortcut": "SHR"
+  },
+  {
+    "CoinType": 49,
+    "CoinShortcut": "GCR"
+  },
+  {
+    "CoinType": 50,
+    "CoinShortcut": "NVC"
+  },
+  {
+    "CoinType": 51,
+    "CoinShortcut": "AC"
+  },
+  {
+    "CoinType": 52,
+    "CoinShortcut": "BTCD"
+  },
+  {
+    "CoinType": 53,
+    "CoinShortcut": "DOPE"
+  },
+  {
+    "CoinType": 54,
+    "CoinShortcut": "TPC"
+  },
+  {
+    "CoinType": 55,
+    "CoinShortcut": "AIB"
+  },
+  {
+    "CoinType": 56,
+    "CoinShortcut": "EDRC"
+  },
+  {
+    "CoinType": 57,
+    "CoinShortcut": "SYS"
+  },
+  {
+    "CoinType": 58,
+    "CoinShortcut": "SLR"
+  },
+  {
+    "CoinType": 59,
+    "CoinShortcut": "SMLY"
+  },
+  {
+    "CoinType": 60,
+    "CoinShortcut": "ETH"
+  },
+  {
+    "CoinType": 61,
+    "CoinShortcut": "ETC"
+  },
+  {
+    "CoinType": 62,
+    "CoinShortcut": "PSB"
+  },
+  {
+    "CoinType": 63,
+    "CoinShortcut": "LDCN"
+  },
+  {
+    "CoinType": 65,
+    "CoinShortcut": "XBC"
+  },
+  {
+    "CoinType": 66,
+    "CoinShortcut": "IOP"
+  },
+  {
+    "CoinType": 67,
+    "CoinShortcut": "NXS"
+  },
+  {
+    "CoinType": 68,
+    "CoinShortcut": "INSN"
+  },
+  {
+    "CoinType": 69,
+    "CoinShortcut": "OK"
+  },
+  {
+    "CoinType": 70,
+    "CoinShortcut": "BRIT"
+  },
+  {
+    "CoinType": 71,
+    "CoinShortcut": "CMP"
+  },
+  {
+    "CoinType": 72,
+    "CoinShortcut": "CRW"
+  },
+  {
+    "CoinType": 73,
+    "CoinShortcut": "BELA"
+  },
+  {
+    "CoinType": 75,
+    "CoinShortcut": "FJC"
+  },
+  {
+    "CoinType": 76,
+    "CoinShortcut": "MIX"
+  },
+  {
+    "CoinType": 77,
+    "CoinShortcut": "XVG"
+  },
+  {
+    "CoinType": 78,
+    "CoinShortcut": "EFL"
+  },
+  {
+    "CoinType": 79,
+    "CoinShortcut": "CLUB"
+  },
+  {
+    "CoinType": 80,
+    "CoinShortcut": "RICHX"
+  },
+  {
+    "CoinType": 81,
+    "CoinShortcut": "POT"
+  },
+  {
+    "CoinType": 82,
+    "CoinShortcut": "QRK"
+  },
+  {
+    "CoinType": 83,
+    "CoinShortcut": "TRC"
+  },
+  {
+    "CoinType": 84,
+    "CoinShortcut": "GRC"
+  },
+  {
+    "CoinType": 85,
+    "CoinShortcut": "AUR"
+  },
+  {
+    "CoinType": 86,
+    "CoinShortcut": "IXC"
+  },
+  {
+    "CoinType": 87,
+    "CoinShortcut": "NLG"
+  },
+  {
+    "CoinType": 88,
+    "CoinShortcut": "BITB"
+  },
+  {
+    "CoinType": 89,
+    "CoinShortcut": "BTA"
+  },
+  {
+    "CoinType": 90,
+    "CoinShortcut": "XMY"
+  },
+  {
+    "CoinType": 91,
+    "CoinShortcut": "BSD"
+  },
+  {
+    "CoinType": 92,
+    "CoinShortcut": "UNO"
+  },
+  {
+    "CoinType": 93,
+    "CoinShortcut": "MTR"
+  },
+  {
+    "CoinType": 94,
+    "CoinShortcut": "GB"
+  },
+  {
+    "CoinType": 95,
+    "CoinShortcut": "SHM"
+  },
+  {
+    "CoinType": 96,
+    "CoinShortcut": "CRX"
+  },
+  {
+    "CoinType": 97,
+    "CoinShortcut": "BIQ"
+  },
+  {
+    "CoinType": 98,
+    "CoinShortcut": "EVO"
+  },
+  {
+    "CoinType": 99,
+    "CoinShortcut": "STO"
+  },
+  {
+    "CoinType": 100,
+    "CoinShortcut": "BIGUP"
+  },
+  {
+    "CoinType": 101,
+    "CoinShortcut": "GAME"
+  },
+  {
+    "CoinType": 102,
+    "CoinShortcut": "DLC"
+  },
+  {
+    "CoinType": 103,
+    "CoinShortcut": "ZYD"
+  },
+  {
+    "CoinType": 104,
+    "CoinShortcut": "DBIC"
+  },
+  {
+    "CoinType": 105,
+    "CoinShortcut": "STRAT"
+  },
+  {
+    "CoinType": 106,
+    "CoinShortcut": "SH"
+  },
+  {
+    "CoinType": 107,
+    "CoinShortcut": "MARS"
+  },
+  {
+    "CoinType": 108,
+    "CoinShortcut": "UBQ"
+  },
+  {
+    "CoinType": 109,
+    "CoinShortcut": "PTC"
+  },
+  {
+    "CoinType": 110,
+    "CoinShortcut": "NRO"
+  },
+  {
+    "CoinType": 111,
+    "CoinShortcut": "ARK"
+  },
+  {
+    "CoinType": 112,
+    "CoinShortcut": "USC"
+  },
+  {
+    "CoinType": 113,
+    "CoinShortcut": "THC"
+  },
+  {
+    "CoinType": 114,
+    "CoinShortcut": "LINX"
+  },
+  {
+    "CoinType": 115,
+    "CoinShortcut": "ECN"
+  },
+  {
+    "CoinType": 116,
+    "CoinShortcut": "DNR"
+  },
+  {
+    "CoinType": 117,
+    "CoinShortcut": "PINK"
+  },
+  {
+    "CoinType": 118,
+    "CoinShortcut": "PIGGY"
+  },
+  {
+    "CoinType": 119,
+    "CoinShortcut": "PIVX"
+  },
+  {
+    "CoinType": 120,
+    "CoinShortcut": "FLASH"
+  },
+  {
+    "CoinType": 121,
+    "CoinShortcut": "ZEN"
+  },
+  {
+    "CoinType": 122,
+    "CoinShortcut": "PUT"
+  },
+  {
+    "CoinType": 123,
+    "CoinShortcut": "ZNY"
+  },
+  {
+    "CoinType": 124,
+    "CoinShortcut": "UNIFY"
+  },
+  {
+    "CoinType": 125,
+    "CoinShortcut": "XST"
+  },
+  {
+    "CoinType": 126,
+    "CoinShortcut": "BRK"
+  },
+  {
+    "CoinType": 127,
+    "CoinShortcut": "VC"
+  },
+  {
+    "CoinType": 128,
+    "CoinShortcut": "XMR"
+  },
+  {
+    "CoinType": 129,
+    "CoinShortcut": "VOX"
+  },
+  {
+    "CoinType": 130,
+    "CoinShortcut": "NAV"
+  },
+  {
+    "CoinType": 131,
+    "CoinShortcut": "FCT"
+  },
+  {
+    "CoinType": 132,
+    "CoinShortcut": "EC"
+  },
+  {
+    "CoinType": 133,
+    "CoinShortcut": "ZEC"
+  },
+  {
+    "CoinType": 134,
+    "CoinShortcut": "LSK"
+  },
+  {
+    "CoinType": 135,
+    "CoinShortcut": "STEEM"
+  },
+  {
+    "CoinType": 136,
+    "CoinShortcut": "XZC"
+  },
+  {
+    "CoinType": 137,
+    "CoinShortcut": "SBTC"
+  },
+  {
+    "CoinType": 139,
+    "CoinShortcut": "RPT"
+  },
+  {
+    "CoinType": 140,
+    "CoinShortcut": "LBC"
+  },
+  {
+    "CoinType": 141,
+    "CoinShortcut": "KMD"
+  },
+  {
+    "CoinType": 142,
+    "CoinShortcut": "BSQ"
+  },
+  {
+    "CoinType": 143,
+    "CoinShortcut": "RIC"
+  },
+  {
+    "CoinType": 144,
+    "CoinShortcut": "XRP"
+  },
+  {
+    "CoinType": 145,
+    "CoinShortcut": "BCH"
+  },
+  {
+    "CoinType": 146,
+    "CoinShortcut": "NEBL"
+  },
+  {
+    "CoinType": 147,
+    "CoinShortcut": "ZCL"
+  },
+  {
+    "CoinType": 148,
+    "CoinShortcut": "XLM"
+  },
+  {
+    "CoinType": 149,
+    "CoinShortcut": "NLC2"
+  },
+  {
+    "CoinType": 150,
+    "CoinShortcut": "WHL"
+  },
+  {
+    "CoinType": 151,
+    "CoinShortcut": "ERC"
+  },
+  {
+    "CoinType": 152,
+    "CoinShortcut": "DMD"
+  },
+  {
+    "CoinType": 153,
+    "CoinShortcut": "BTM"
+  },
+  {
+    "CoinType": 154,
+    "CoinShortcut": "BIO"
+  },
+  {
+    "CoinType": 155,
+    "CoinShortcut": "XWC"
+  },
+  {
+    "CoinType": 156,
+    "CoinShortcut": "BTG"
+  },
+  {
+    "CoinType": 157,
+    "CoinShortcut": "BTC2X"
+  },
+  {
+    "CoinType": 158,
+    "CoinShortcut": "SSN"
+  },
+  {
+    "CoinType": 159,
+    "CoinShortcut": "TOA"
+  },
+  {
+    "CoinType": 160,
+    "CoinShortcut": "BTX"
+  },
+  {
+    "CoinType": 161,
+    "CoinShortcut": "ACC"
+  },
+  {
+    "CoinType": 162,
+    "CoinShortcut": "BCO"
+  },
+  {
+    "CoinType": 163,
+    "CoinShortcut": "ELLA"
+  },
+  {
+    "CoinType": 164,
+    "CoinShortcut": "PIRL"
+  },
+  {
+    "CoinType": 165,
+    "CoinShortcut": "XRB"
+  },
+  {
+    "CoinType": 166,
+    "CoinShortcut": "VIVO"
+  },
+  {
+    "CoinType": 167,
+    "CoinShortcut": "FRST"
+  },
+  {
+    "CoinType": 168,
+    "CoinShortcut": "HNC"
+  },
+  {
+    "CoinType": 169,
+    "CoinShortcut": "BUZZ"
+  },
+  {
+    "CoinType": 170,
+    "CoinShortcut": "MBRS"
+  },
+  {
+    "CoinType": 171,
+    "CoinShortcut": "HSR"
+  },
+  {
+    "CoinType": 172,
+    "CoinShortcut": "HTML"
+  },
+  {
+    "CoinType": 173,
+    "CoinShortcut": "ODN"
+  },
+  {
+    "CoinType": 174,
+    "CoinShortcut": "ONX"
+  },
+  {
+    "CoinType": 175,
+    "CoinShortcut": "RVN"
+  },
+  {
+    "CoinType": 176,
+    "CoinShortcut": "GBX"
+  },
+  {
+    "CoinType": 177,
+    "CoinShortcut": "BTCZ"
+  },
+  {
+    "CoinType": 178,
+    "CoinShortcut": "POA"
+  },
+  {
+    "CoinType": 179,
+    "CoinShortcut": "NYC"
+  },
+  {
+    "CoinType": 180,
+    "CoinShortcut": "MXT"
+  },
+  {
+    "CoinType": 181,
+    "CoinShortcut": "WC"
+  },
+  {
+    "CoinType": 182,
+    "CoinShortcut": "MNX"
+  },
+  {
+    "CoinType": 183,
+    "CoinShortcut": "BTCP"
+  },
+  {
+    "CoinType": 184,
+    "CoinShortcut": "MUSIC"
+  },
+  {
+    "CoinType": 185,
+    "CoinShortcut": "BCA"
+  },
+  {
+    "CoinType": 186,
+    "CoinShortcut": "CRAVE"
+  },
+  {
+    "CoinType": 187,
+    "CoinShortcut": "STAK"
+  },
+  {
+    "CoinType": 188,
+    "CoinShortcut": "WBTC"
+  },
+  {
+    "CoinType": 189,
+    "CoinShortcut": "LCH"
+  },
+  {
+    "CoinType": 190,
+    "CoinShortcut": "EXCL"
+  },
+  {
+    "CoinType": 192,
+    "CoinShortcut": "LCC"
+  },
+  {
+    "CoinType": 193,
+    "CoinShortcut": "XFE"
+  },
+  {
+    "CoinType": 194,
+    "CoinShortcut": "EOS"
+  },
+  {
+    "CoinType": 195,
+    "CoinShortcut": "TRX"
+  },
+  {
+    "CoinType": 196,
+    "CoinShortcut": "KOBO"
+  },
+  {
+    "CoinType": 197,
+    "CoinShortcut": "HUSH"
+  },
+  {
+    "CoinType": 198,
+    "CoinShortcut": "BANANO"
+  },
+  {
+    "CoinType": 199,
+    "CoinShortcut": "ETF"
+  },
+  {
+    "CoinType": 200,
+    "CoinShortcut": "OMNI"
+  },
+  {
+    "CoinType": 201,
+    "CoinShortcut": "BIFI"
+  },
+  {
+    "CoinType": 202,
+    "CoinShortcut": "UFO"
+  },
+  {
+    "CoinType": 203,
+    "CoinShortcut": "CNMC"
+  },
+  {
+    "CoinType": 204,
+    "CoinShortcut": "NRG"
+  },
+  {
+    "CoinType": 205,
+    "CoinShortcut": "RIN"
+  },
+  {
+    "CoinType": 206,
+    "CoinShortcut": "ATP"
+  },
+  {
+    "CoinType": 207,
+    "CoinShortcut": "EVT"
+  },
+  {
+    "CoinType": 208,
+    "CoinShortcut": "ATN"
+  },
+  {
+    "CoinType": 209,
+    "CoinShortcut": "BIS"
+  },
+  {
+    "CoinType": 210,
+    "CoinShortcut": "NEET"
+  },
+  {
+    "CoinType": 211,
+    "CoinShortcut": "BOPO"
+  },
+  {
+    "CoinType": 212,
+    "CoinShortcut": "OOT"
+  },
+  {
+    "CoinType": 213,
+    "CoinShortcut": "XSPEC"
+  },
+  {
+    "CoinType": 215,
+    "CoinShortcut": "BOXY"
+  },
+  {
+    "CoinType": 216,
+    "CoinShortcut": "FLO"
+  },
+  {
+    "CoinType": 217,
+    "CoinShortcut": "MEC"
+  },
+  {
+    "CoinType": 218,
+    "CoinShortcut": "BTDX"
+  },
+  {
+    "CoinType": 219,
+    "CoinShortcut": "XAX"
+  },
+  {
+    "CoinType": 222,
+    "CoinShortcut": "BITG"
+  },
+  {
+    "CoinType": 223,
+    "CoinShortcut": "ASK"
+  },
+  {
+    "CoinType": 224,
+    "CoinShortcut": "SMART"
+  },
+  {
+    "CoinType": 225,
+    "CoinShortcut": "XUEZ"
+  },
+  {
+    "CoinType": 226,
+    "CoinShortcut": "HLM"
+  },
+  {
+    "CoinType": 233,
+    "CoinShortcut": "VAR"
+  },
+  {
+    "CoinType": 242,
+    "CoinShortcut": "NIM"
+  },
+  {
+    "CoinType": 247,
+    "CoinShortcut": "UC"
+  },
+  {
+    "CoinType": 250,
+    "CoinShortcut": "SOOM"
+  },
+  {
+    "CoinType": 253,
+    "CoinShortcut": "NPW"
+  },
+  {
+    "CoinType": 256,
+    "CoinShortcut": "NANO"
+  },
+  {
+    "CoinType": 257,
+    "CoinShortcut": "BTCC"
+  },
+  {
+    "CoinType": 259,
+    "CoinShortcut": "ZEST"
+  },
+  {
+    "CoinType": 270,
+    "CoinShortcut": "ONE"
+  },
+  {
+    "CoinType": 271,
+    "CoinShortcut": "SBC"
+  },
+  {
+    "CoinType": 299,
+    "CoinShortcut": "NUKO"
+  },
+  {
+    "CoinType": 300,
+    "CoinShortcut": "GNX"
+  },
+  {
+    "CoinType": 301,
+    "CoinShortcut": "DIVI"
+  },
+  {
+    "CoinType": 312,
+    "CoinShortcut": "ARA"
+  },
+  {
+    "CoinType": 321,
+    "CoinShortcut": "RAP"
+  },
+  {
+    "CoinType": 328,
+    "CoinShortcut": "BLOCK"
+  },
+  {
+    "CoinType": 333,
+    "CoinShortcut": "MEM"
+  },
+  {
+    "CoinType": 384,
+    "CoinShortcut": "XSN"
+  },
+  {
+    "CoinType": 425,
+    "CoinShortcut": "AION"
+  },
+  {
+    "CoinType": 444,
+    "CoinShortcut": "PHR"
+  },
+  {
+    "CoinType": 510,
+    "CoinShortcut": "KOTO"
+  },
+  {
+    "CoinType": 512,
+    "CoinShortcut": "XRD"
+  },
+  {
+    "CoinType": 518,
+    "CoinShortcut": "LET"
+  },
+  {
+    "CoinType": 526,
+    "CoinShortcut": "BU"
+  },
+  {
+    "CoinType": 528,
+    "CoinShortcut": "YAP"
+  },
+  {
+    "CoinType": 555,
+    "CoinShortcut": "BCS"
+  },
+  {
+    "CoinType": 557,
+    "CoinShortcut": "LKR"
+  },
+  {
+    "CoinType": 618,
+    "CoinShortcut": "SSP"
+  },
+  {
+    "CoinType": 625,
+    "CoinShortcut": "EAST"
+  },
+  {
+    "CoinType": 666,
+    "CoinShortcut": "ACT"
+  },
+  {
+    "CoinType": 668,
+    "CoinShortcut": "SSC"
+  },
+  {
+    "CoinType": 777,
+    "CoinShortcut": "BTW"
+  },
+  {
+    "CoinType": 800,
+    "CoinShortcut": "BEET"
+  },
+  {
+    "CoinType": 801,
+    "CoinShortcut": "DST"
+  },
+  {
+    "CoinType": 808,
+    "CoinShortcut": "QVT"
+  },
+  {
+    "CoinType": 818,
+    "CoinShortcut": "VET"
+  },
+  {
+    "CoinType": 820,
+    "CoinShortcut": "CLO"
+  },
+  {
+    "CoinType": 886,
+    "CoinShortcut": "ADF"
+  },
+  {
+    "CoinType": 888,
+    "CoinShortcut": "NEO"
+  },
+  {
+    "CoinType": 889,
+    "CoinShortcut": "TOMO"
+  },
+  {
+    "CoinType": 890,
+    "CoinShortcut": "XSEL"
+  },
+  {
+    "CoinType": 998,
+    "CoinShortcut": "LBTC"
+  },
+  {
+    "CoinType": 999,
+    "CoinShortcut": "BCD"
+  },
+  {
+    "CoinType": 1000,
+    "CoinShortcut": "BTN"
+  },
+  {
+    "CoinType": 1001,
+    "CoinShortcut": "TT"
+  },
+  {
+    "CoinType": 1002,
+    "CoinShortcut": "BKT"
+  },
+  {
+    "CoinType": 1024,
+    "CoinShortcut": "ONT"
+  },
+  {
+    "CoinType": 1111,
+    "CoinShortcut": "BBC"
+  },
+  {
+    "CoinType": 1120,
+    "CoinShortcut": "RISE"
+  },
+  {
+    "CoinType": 1122,
+    "CoinShortcut": "CMT"
+  },
+  {
+    "CoinType": 1128,
+    "CoinShortcut": "ETSC"
+  },
+  {
+    "CoinType": 1145,
+    "CoinShortcut": "CDY"
+  },
+  {
+    "CoinType": 1337,
+    "CoinShortcut": "DFC"
+  },
+  {
+    "CoinType": 1397,
+    "CoinShortcut": "HYC"
+  },
+  {
+    "CoinType": 1620,
+    "CoinShortcut": "ATH"
+  },
+  {
+    "CoinType": 1688,
+    "CoinShortcut": "BCX"
+  },
+  {
+    "CoinType": 1729,
+    "CoinShortcut": "XTZ"
+  },
+  {
+    "CoinType": 1815,
+    "CoinShortcut": "ADA"
+  },
+  {
+    "CoinType": 1856,
+    "CoinShortcut": "TES"
+  },
+  {
+    "CoinType": 1901,
+    "CoinShortcut": "CLC"
+  },
+  {
+    "CoinType": 1919,
+    "CoinShortcut": "VIPS"
+  },
+  {
+    "CoinType": 1977,
+    "CoinShortcut": "XMX"
+  },
+  {
+    "CoinType": 1987,
+    "CoinShortcut": "EGEM"
+  },
+  {
+    "CoinType": 1989,
+    "CoinShortcut": "HODL"
+  },
+  {
+    "CoinType": 1990,
+    "CoinShortcut": "PHL"
+  },
+  {
+    "CoinType": 1997,
+    "CoinShortcut": "POLIS"
+  },
+  {
+    "CoinType": 1998,
+    "CoinShortcut": "XMCC"
+  },
+  {
+    "CoinType": 1999,
+    "CoinShortcut": "COLX"
+  },
+  {
+    "CoinType": 2018,
+    "CoinShortcut": "EOSC"
+  },
+  {
+    "CoinType": 2301,
+    "CoinShortcut": "QTUM"
+  },
+  {
+    "CoinType": 2302,
+    "CoinShortcut": "ETP"
+  },
+  {
+    "CoinType": 2303,
+    "CoinShortcut": "GXC"
+  },
+  {
+    "CoinType": 2304,
+    "CoinShortcut": "SSC"
+  },
+  {
+    "CoinType": 2305,
+    "CoinShortcut": "ELA"
+  },
+  {
+    "CoinType": 2570,
+    "CoinShortcut": "AOA"
+  },
+  {
+    "CoinType": 3552,
+    "CoinShortcut": "DEO"
+  },
+  {
+    "CoinType": 2718,
+    "CoinShortcut": "NAS"
+  },
+  {
+    "CoinType": 3377,
+    "CoinShortcut": "ROI"
+  },
+  {
+    "CoinType": 4218,
+    "CoinShortcut": "IOTA"
+  },
+  {
+    "CoinType": 4242,
+    "CoinShortcut": "AXE"
+  },
+  {
+    "CoinType": 5248,
+    "CoinShortcut": "FIC"
+  },
+  {
+    "CoinType": 5353,
+    "CoinShortcut": "HNS"
+  },
+  {
+    "CoinType": 6060,
+    "CoinShortcut": "GO"
+  },
+  {
+    "CoinType": 6666,
+    "CoinShortcut": "BPA"
+  },
+  {
+    "CoinType": 6688,
+    "CoinShortcut": "SAFE"
+  },
+  {
+    "CoinType": 6969,
+    "CoinShortcut": "ROGER"
+  },
+  {
+    "CoinType": 7777,
+    "CoinShortcut": "BTV"
+  },
+  {
+    "CoinType": 8339,
+    "CoinShortcut": "BTQ"
+  },
+  {
+    "CoinType": 8888,
+    "CoinShortcut": "SBTC"
+  },
+  {
+    "CoinType": 8999,
+    "CoinShortcut": "BTP"
+  },
+  {
+    "CoinType": 9888,
+    "CoinShortcut": "BTF"
+  },
+  {
+    "CoinType": 9999,
+    "CoinShortcut": "GOD"
+  },
+  {
+    "CoinType": 10000,
+    "CoinShortcut": "FO"
+  },
+  {
+    "CoinType": 10291,
+    "CoinShortcut": "BTR"
+  },
+  {
+    "CoinType": 13107,
+    "CoinShortcut": "BTY"
+  },
+  {
+    "CoinType": 13108,
+    "CoinShortcut": "YCC"
+  },
+  {
+    "CoinType": 15845,
+    "CoinShortcut": "SDGO"
+  },
+  {
+    "CoinType": 20036,
+    "CoinShortcut": "NDAU"
+  },
+  {
+    "CoinType": 22504,
+    "CoinShortcut": "PWR"
+  },
+  {
+    "CoinType": 31102,
+    "CoinShortcut": "ESN"
+  },
+  {
+    "CoinType": 33878,
+    "CoinShortcut": "BTCS"
+  },
+  {
+    "CoinType": 34952,
+    "CoinShortcut": "BTT"
+  },
+  {
+    "CoinType": 65536,
+    "CoinShortcut": "KETH"
+  },
+  {
+    "CoinType": 99999,
+    "CoinShortcut": "WICC"
+  },
+  {
+    "CoinType": 200625,
+    "CoinShortcut": "AKA"
+  },
+  {
+    "CoinType": 424242,
+    "CoinShortcut": "X42"
+  },
+  {
+    "CoinType": 666666,
+    "CoinShortcut": "VITE"
+  },
+  {
+    "CoinType": 1313114,
+    "CoinShortcut": "ETHO"
+  },
+  {
+    "CoinType": 1712144,
+    "CoinShortcut": "LAX"
+  },
+  {
+    "CoinType": 5249353,
+    "CoinShortcut": "BCO"
+  },
+  {
+    "CoinType": 5249354,
+    "CoinShortcut": "BHD"
+  },
+  {
+    "CoinType": 5718350,
+    "CoinShortcut": "WAN"
+  },
+  {
+    "CoinType": 5741564,
+    "CoinShortcut": "WAVES"
+  },
+  {
+    "CoinType": 91927009,
+    "CoinShortcut": "kUSD"
+  }
+]
