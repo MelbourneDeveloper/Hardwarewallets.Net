@@ -40,4 +40,8 @@
     <EmbeddedResource Include="Resources\Slip0044.json" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+
 </Project>
