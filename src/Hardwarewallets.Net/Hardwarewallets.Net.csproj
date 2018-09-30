@@ -32,4 +32,12 @@
     <Compile Remove="Model\ITransaction.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\Slip0044.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Slip0044.json" />
+  </ItemGroup>
+
 </Project>
