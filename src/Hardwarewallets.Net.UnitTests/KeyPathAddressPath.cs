@@ -2,7 +2,7 @@
 using Hardwarewallets.Net.Model;
 using NBitcoin;
 
-namespace Ledger.Net.Tests
+namespace Hardwarewallets.Net.UnitTests
 {
     public class KeyPathAddressPath : IAddressPath
     {
