@@ -14,7 +14,7 @@ namespace Hardwarewallets.Net.UnitTests
         public async Task GetBitcoinAddress()
         {
             await Initialize();
-            var address = await AddressDeriver.GetAddressAsync(new NicolasFlavouredAddressPath(new KeyPath("49/0/0/0/0")), false, true);
+            var address = await AddressDeriver.GetAddressAsync(new KeyPathAddressPath(new KeyPath("49/0/0/0/0")), false, true);
         }
 
         [Fact]
