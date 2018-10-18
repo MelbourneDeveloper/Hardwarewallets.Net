@@ -2,11 +2,11 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net/blob/master/LICENSE</PackageLicenseUrl>
     <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <Authors>Christian Findlay</Authors>
     <Description>Cross platform, base C# library for all Hardwarewallets. Provides simple interfaces that sit underneath all hardwarewallet libraries, and utilitiy classes that sit over the top all libraries</Description>
     <Copyright>Christian Findlay</Copyright>
@@ -14,6 +14,8 @@
     <RepositoryUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net</RepositoryUrl>
     <PackageTags>Hardwarewallet Trezor KeepKey Ledger Bitcoin Ethereum</PackageTags>
     <PackageReleaseNotes>First release of interfaces and utility classes for getting addresses</PackageReleaseNotes>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
@@ -38,6 +40,10 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\Slip0044.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>
