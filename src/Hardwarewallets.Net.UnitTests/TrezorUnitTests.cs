@@ -18,7 +18,7 @@ namespace Hardwarewallets.Net.UnitTests
             var trezorHidDevice = await Connect();
             var trezorManager = new TrezorManager(GetPin, trezorHidDevice);
             await trezorManager.InitializeAsync();
-            AddressDeriver = new TrezorManagerWrapper<TrezorManager>(trezorManager);
+            AddressDeriver = trezorManager;
         }
 
         private async Task<IHidDevice> Connect()
