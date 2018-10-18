@@ -17,7 +17,7 @@ namespace Hardwarewallets.Net.UnitTests
 
             var ledgerDevice = await Connect();
             var ledgerManager = new LedgerManager(ledgerDevice);
-            AddressDeriver = new LedgerManagerWrapper(ledgerManager);
+            AddressDeriver = ledgerManager;
         }
 
         private async Task<IHidDevice> Connect()

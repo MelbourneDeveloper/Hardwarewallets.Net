@@ -18,7 +18,7 @@ namespace Hardwarewallets.Net.UnitTests
             var keepKeyDevice = await Connect();
             var keepKeyManager = new KeepKeyManager(GetPin, keepKeyDevice);
             await keepKeyManager.InitializeAsync();
-            AddressDeriver = new KeepKeyManagerWrapper(keepKeyManager);
+            AddressDeriver = keepKeyManager;
         }
 
         private async Task<IHidDevice> Connect()
