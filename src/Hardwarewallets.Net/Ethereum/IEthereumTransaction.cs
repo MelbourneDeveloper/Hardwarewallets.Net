@@ -12,7 +12,7 @@ namespace Hardwarewallets.Net.Ethereum
     /// <summary>
     /// An Ethereum transaciton for signing
     /// </summary>
-    public interface IEthereumTransaction
+    public interface IEthereumTransaction : ITransaction
     {
         /// <summary>
         /// Number of outgoing transactions
@@ -30,10 +30,6 @@ namespace Hardwarewallets.Net.Ethereum
         /// The account the transaction is sent to
         /// </summary>
         string To { get; }
-        /// <summary>
-        /// Value in ETH
-        /// </summary>
-        decimal Value { get; }
         /// <summary>
         /// The address path to derive the address from which the wallet will move the funds from
         /// </summary>

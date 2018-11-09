@@ -27,11 +27,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="ITransactionSigner.cs" />
     <Compile Remove="Model\IEthereumTransaction.cs" />
     <Compile Remove="Model\ISignedEthereumTransaction.cs" />
     <Compile Remove="Model\ISignedTransaction.cs" />
-    <Compile Remove="Model\ITransaction.cs" />
   </ItemGroup>
 
   <ItemGroup>
