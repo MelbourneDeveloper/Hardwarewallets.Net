@@ -19,13 +19,13 @@ namespace Hardwarewallets.Net.Ethereum
         /// </summary>
         int Nonce { get; }
         /// <summary>
-        /// Gas price in ETH
+        /// Gas price in GWEI
         /// </summary>
-        decimal GasPrice { get; }
+        BigInteger GasPrice { get; }
         /// <summary>
-        /// Gas limit in ETH
+        /// Gas limit of gas units to be spent for the transaction
         /// </summary>
-        decimal GasLimit { get; set; }
+        uint GasLimit { get; }
         /// <summary>
         /// The account the transaction is sent to
         /// </summary>
@@ -41,6 +41,6 @@ namespace Hardwarewallets.Net.Ethereum
         /// <summary>
         /// The Ethereum chain/network
         /// </summary>
-        int ChainId { get; }
+        BigInteger ChainId { get; }
     }
 }
