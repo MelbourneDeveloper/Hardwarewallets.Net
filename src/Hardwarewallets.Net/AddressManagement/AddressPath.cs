@@ -28,7 +28,7 @@ namespace Hardwarewallets.Net.AddressManagement
             return new uint[5] { Purpose, CoinType, Account, Change, AddressIndex };
         }
 
-        public uint[] ToHardenedArray()
+        public uint[] ToArray()
         {
             return new uint[5] { AddressUtilities.HardenNumber(Purpose), AddressUtilities.HardenNumber(CoinType), AddressUtilities.HardenNumber(Account), Change, AddressIndex };
         }

@@ -27,6 +27,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Utilities\**" />
+    <EmbeddedResource Remove="Utilities\**" />
+    <None Remove="Utilities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="ITransactionSigner.cs" />
     <Compile Remove="Model\IEthereumTransaction.cs" />
     <Compile Remove="Model\ISignedEthereumTransaction.cs" />
@@ -40,10 +46,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\Slip0044.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Utilities\" />
   </ItemGroup>
 
 </Project>
