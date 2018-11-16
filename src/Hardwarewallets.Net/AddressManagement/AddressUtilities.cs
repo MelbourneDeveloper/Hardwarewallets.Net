@@ -1,4 +1,6 @@
-﻿namespace Hardwarewallets.Net.AddressManagement
+﻿using System;
+
+namespace Hardwarewallets.Net.AddressManagement
 {
     public static class AddressUtilities
     {
@@ -12,6 +14,11 @@
         public static uint UnhardenNumber(uint hardNumber)
         {
             return hardNumber ^ HardeningConstant;
+        }
+
+        public static string[] Split(this string path, char splitter)
+        {
+            return path.Split(new[] { splitter }, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }

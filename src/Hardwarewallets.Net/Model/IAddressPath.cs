@@ -11,7 +11,7 @@ namespace Hardwarewallets.Net.Model
         /// <summary>
         /// The collection of IAddressPathElements which make up the address path
         /// </summary>
-        Collection<IAddressPathElement> AddressPathElements { get; }
+        List<IAddressPathElement> AddressPathElements { get; }
 
         /// <summary>
         /// Returns the address path as an array of uints. Indices will be hardended or unhardened depending on their IsHardened property
