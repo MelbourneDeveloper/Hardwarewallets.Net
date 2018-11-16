@@ -2,7 +2,7 @@
 
 namespace Hardwarewallets.Net.AddressManagement
 {
-    public class BIP44AddressPath : IBIP44AddressPath
+    public class BIP44AddressPath : AddressPathBase, IBIP44AddressPath
     {
         public uint Purpose { get; }
 

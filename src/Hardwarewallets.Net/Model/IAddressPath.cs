@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Hardwarewallets.Net.Model
 {
@@ -10,7 +11,7 @@ namespace Hardwarewallets.Net.Model
         /// <summary>
         /// The collection of IAddressPathElements which make up the address path
         /// </summary>
-        ICollection<IAddressPathElement> AddressPathElements { get; }
+        Collection<IAddressPathElement> AddressPathElements { get; }
 
         /// <summary>
         /// Returns the address path as an array of uints. Indices will be hardended or unhardened depending on their IsHardened property
