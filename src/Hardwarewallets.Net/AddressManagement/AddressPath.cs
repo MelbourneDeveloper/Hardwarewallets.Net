@@ -14,6 +14,11 @@ namespace Hardwarewallets.Net.AddressManagement
 
         public uint AddressIndex => AddressPathElements[4].UnhardenedValue;
 
+        public BIP44AddressPath()
+        {
+
+        }
+
         public BIP44AddressPath(bool isSegwit, uint coinType, uint account, bool isChange, uint addressIndex)
         {
             AddressPathElements.Add(new AddressPathElement { UnhardenedValue = isSegwit ? (uint)49 : 44, Harden = true });

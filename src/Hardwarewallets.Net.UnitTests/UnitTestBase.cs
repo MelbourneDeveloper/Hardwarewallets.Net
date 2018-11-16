@@ -1,5 +1,4 @@
 ﻿using Hardwarewallets.Net.AddressManagement;
-using NBitcoin;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -14,7 +13,7 @@ namespace Hardwarewallets.Net.UnitTests
         public async Task GetBitcoinAddress()
         {
             await Initialize();
-            var address = await AddressDeriver.GetAddressAsync(new KeyPathAddressPath(new KeyPath("49/0/0/0/0")), false, true);
+            var address = await AddressDeriver.GetAddressAsync(AddressPathBase.Parse<BIP44AddressPath>("49/0/0/0/0"), false, true);
         }
 
         [Fact]
@@ -36,6 +35,12 @@ namespace Hardwarewallets.Net.UnitTests
             Assert.True(addresses.Accounts[1].Addresses.Count == numberOfAddresses);
             Assert.True(addresses.Accounts[0].ChangeAddresses.Count == numberOfAddresses);
             Assert.True(addresses.Accounts[1].ChangeAddresses.Count == numberOfAddresses);
+        }
+
+        [Fact]
+        public void TestParser()
+        {
+            var addressPath = AddressPathBase.Parse<BIP44AddressPath>("m/45/5/3/5'");
         }
     }
 }
