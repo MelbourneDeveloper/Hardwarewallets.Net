@@ -2,7 +2,7 @@
 
 namespace Hardwarewallets.Net.AddressManagement
 {
-    public class AddressPath : IAddressPath
+    public class BIP44AddressPath : IBIP44AddressPath
     {
         public uint Purpose { get; }
 
@@ -14,7 +14,7 @@ namespace Hardwarewallets.Net.AddressManagement
 
         public uint AddressIndex { get; }
 
-        public AddressPath(bool isSegwit, uint coinType, uint account, bool isChange, uint addressIndex)
+        public BIP44AddressPath(bool isSegwit, uint coinType, uint account, bool isChange, uint addressIndex)
         {
             Purpose = isSegwit ? (uint)49 : 44;
             CoinType = coinType;

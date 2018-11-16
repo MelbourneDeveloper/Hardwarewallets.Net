@@ -16,7 +16,7 @@ namespace Hardwarewallets.Net
 
         public IAddressPath GetAddressPath(uint change, uint account, uint addressIndex)
         {
-            return new AddressPath(IsSegwit, CointType, account, change == 0 ? false : true, addressIndex);
+            return new BIP44AddressPath(IsSegwit, CointType, account, change == 0 ? false : true, addressIndex);
         }
     }
 }
