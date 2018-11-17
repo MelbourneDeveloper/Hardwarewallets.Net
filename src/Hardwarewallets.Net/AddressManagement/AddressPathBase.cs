@@ -12,14 +12,16 @@ namespace Hardwarewallets.Net.AddressManagement
         #endregion
 
         #region Private Static Methods
-        private static uint ParseElement(string elementString)
+        private static AddressPathElement ParseElement(string elementString)
         {
+            var harden = elementString.EndsWith("'");
+
             if (!uint.TryParse(elementString.Replace("'", string.Empty), out var unhardenedNumber))
             {
                 throw new Exception($"The value {elementString} is not a valid path element");
             }
 
-            return unhardenedNumber;
+            return new AddressPathElement { Harden= harden, UnhardenedValue= unhardenedNumber };
         }
         #endregion
 
@@ -33,14 +35,7 @@ namespace Hardwarewallets.Net.AddressManagement
             {
                AddressPathElements = path.Split('/')
                .Where(t => string.Compare("m", t, StringComparison.OrdinalIgnoreCase) != 0)
-               .Select
-               (
-                   t => new AddressPathElement
-                   {
-                       Harden = t.EndsWith("'"),
-                       UnhardenedValue = ParseElement(t)
-                   }
-               )
+               .Select(t => ParseElement(t) )
                .Cast<IAddressPathElement>()
                .ToList()
             };   
