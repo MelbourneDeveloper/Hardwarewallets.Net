@@ -1,5 +1,6 @@
 ﻿using Hardwarewallets.Net.AddressManagement;
 using System;
+using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -76,6 +77,18 @@ namespace Hardwarewallets.Net.UnitTests
             Assert.True(0 == bip44AddressPath.Account);
             Assert.True(0 == bip44AddressPath.Change);
             Assert.True(0 == bip44AddressPath.AddressIndex);
+
+            var sb = new StringBuilder();
+            sb.Append("M");
+            for (var i = 0; i < 100; i++)
+            {
+                sb.Append($"/{i}{(i % 2 == 0 ? "'" : string.Empty)}");
+            }
+            customAddressPath = AddressPathBase.Parse<CustomAddressPath>(sb.ToString());
+            for (var i = 0; i < 100; i++)
+            {
+                Assert.True(customAddressPath.AddressPathElements[i].Harden == (i % 2 == 0));
+            }
 
             Exception validationException = null;
             try
