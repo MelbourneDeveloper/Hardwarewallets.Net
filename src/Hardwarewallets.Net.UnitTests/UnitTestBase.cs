@@ -54,6 +54,8 @@ namespace Hardwarewallets.Net.UnitTests
 
             Assert.Equal(5, (int)addressPath.AddressPathElements[3].UnhardenedValue);
             Assert.True(addressPath.AddressPathElements[3].Harden);
+
+            Assert.True(2147483653 == addressPath.ToArray()[3]);
         }
     }
 }
