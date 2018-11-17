@@ -21,7 +21,7 @@ namespace Hardwarewallets.Net.UnitTests
         {
             await Initialize();
 
-            var addressManager = new AddressManager(AddressDeriver, new AddressPathFactory(true, 0));
+            var addressManager = new AddressManager(AddressDeriver, new BIP44AddressPathFactory(true, 0));
 
             //Get 10 addresses with all the trimming
             const int numberOfAddresses = 3;
