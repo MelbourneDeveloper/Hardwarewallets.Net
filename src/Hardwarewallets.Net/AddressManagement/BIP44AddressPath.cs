@@ -1,23 +1,25 @@
 ﻿using Hardwarewallets.Net.Model;
+using System;
 
 namespace Hardwarewallets.Net.AddressManagement
 {
     public class BIP44AddressPath : AddressPathBase, IBIP44AddressPath
     {
-        public uint Purpose => AddressPathElements[0].UnhardenedValue;
+        public uint Purpose => IsValid ? AddressPathElements[0].UnhardenedValue : 0;
 
-        public uint CoinType => AddressPathElements[1].UnhardenedValue;
+        public uint CoinType => IsValid ? AddressPathElements[1].UnhardenedValue : 0;
 
-        public uint Account => AddressPathElements[2].UnhardenedValue;
+        public uint Account => IsValid ? AddressPathElements[2].UnhardenedValue : 0;
 
-        public uint Change => AddressPathElements[3].UnhardenedValue;
+        public uint Change => IsValid ? AddressPathElements[3].UnhardenedValue : 0;
 
-        public uint AddressIndex => AddressPathElements[4].UnhardenedValue;
+        public uint AddressIndex => IsValid ? AddressPathElements[4].UnhardenedValue : 0;
 
         public BIP44AddressPath()
         {
-
         }
+
+        private bool IsValid => AddressPathElements.Count == 5 ? true : throw new Exception($"The address path is not a valid BIP44 Address Path. 5 Elements are required but {AddressPathElements.Count} were found.");
 
         public BIP44AddressPath(bool isSegwit, uint coinType, uint account, bool isChange, uint addressIndex)
         {
