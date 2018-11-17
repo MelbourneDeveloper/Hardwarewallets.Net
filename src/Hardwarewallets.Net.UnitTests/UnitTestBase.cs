@@ -67,6 +67,12 @@ namespace Hardwarewallets.Net.UnitTests
 
             Assert.True(2147483653 == customAddressPath.ToArray()[3]);
             Assert.True(5 == customAddressPath.AddressPathElements[3].UnhardenedValue);
+
+            customAddressPath = AddressPathBase.Parse<CustomAddressPath>("0/1/2");
+
+            Assert.True(0 == customAddressPath.AddressPathElements[0].UnhardenedValue);
+            Assert.True(1 == customAddressPath.AddressPathElements[1].UnhardenedValue);
+            Assert.True(2 == customAddressPath.AddressPathElements[2].UnhardenedValue);
         }
     }
 }
