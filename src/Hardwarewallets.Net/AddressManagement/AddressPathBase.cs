@@ -27,6 +27,11 @@ namespace Hardwarewallets.Net.AddressManagement
         public uint[] ToArray() => AddressPathElements.Select(ape => ape.Harden ? AddressUtilities.HardenNumber(ape.UnhardenedValue) : ape.UnhardenedValue).ToArray();
         #endregion
 
+        public override string ToString()
+        {
+            return $"m/{string.Join("/", AddressPathElements.Select(ape=>$"{ape.UnhardenedValue}{(ape.Harden?"'":string.Empty)}"))}"; 
+        }
+
         #region Public Static Methods
         public static T Parse<T>(string path) where T : AddressPathBase, new() =>
             new T

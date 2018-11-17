@@ -42,7 +42,11 @@ namespace Hardwarewallets.Net.UnitTests
         [Fact]
         public void TestParser()
         {
-            var customAddressPath = AddressPathBase.Parse<CustomAddressPath>("m/45/5/3/5'/0'");
+            var pathAsString = "m/45/5/3/5'/0'";
+            var customAddressPath = AddressPathBase.Parse<CustomAddressPath>(pathAsString);
+
+            Assert.Equal(pathAsString, customAddressPath.ToString());
+
             Assert.True(5 == customAddressPath.AddressPathElements.Count);
 
             Assert.True(45 == customAddressPath.AddressPathElements[0].UnhardenedValue);
@@ -59,7 +63,9 @@ namespace Hardwarewallets.Net.UnitTests
 
             Assert.True(2147483653 == customAddressPath.ToArray()[3]);
 
-            customAddressPath = AddressPathBase.Parse<CustomAddressPath>("m/45/5/3/5'");
+            pathAsString = "m/45/5/3/5'";
+            customAddressPath = AddressPathBase.Parse<CustomAddressPath>(pathAsString);
+            Assert.Equal(pathAsString, customAddressPath.ToString());
 
             Assert.True(2147483653 == customAddressPath.ToArray()[3]);
             Assert.True(5 == customAddressPath.AddressPathElements[3].UnhardenedValue);
@@ -81,7 +87,7 @@ namespace Hardwarewallets.Net.UnitTests
             Assert.True(bip44AddressPath.ToArray()[0] == 2147483692);
 
             var sb = new StringBuilder();
-            sb.Append("M");
+            sb.Append("m");
             for (var i = 0; i < 100; i++)
             {
                 sb.Append($"/{i}{(i % 2 == 0 ? "'" : string.Empty)}");
@@ -91,6 +97,8 @@ namespace Hardwarewallets.Net.UnitTests
             {
                 Assert.True(customAddressPath.AddressPathElements[i].Harden == (i % 2 == 0));
             }
+
+            Assert.Equal(sb.ToString(), customAddressPath.ToString());
 
             Exception validationException = null;
             try
