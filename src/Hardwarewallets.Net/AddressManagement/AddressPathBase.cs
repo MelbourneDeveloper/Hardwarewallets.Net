@@ -21,7 +21,7 @@ namespace Hardwarewallets.Net.AddressManagement
                 throw new Exception($"The value {elementString} is not a valid path element");
             }
 
-            return new AddressPathElement { Harden= harden, UnhardenedValue= unhardenedNumber };
+            return new AddressPathElement { Harden = harden, UnhardenedValue = unhardenedNumber };
         }
         #endregion
 
@@ -30,15 +30,15 @@ namespace Hardwarewallets.Net.AddressManagement
         #endregion
 
         #region Public Static Methods
-        public static T Parse<T>(string path) where T : AddressPathBase, new() => 
+        public static T Parse<T>(string path) where T : AddressPathBase, new() =>
             new T()
             {
-               AddressPathElements = path.Split('/')
+                AddressPathElements = path.Split('/')
                .Where(t => string.Compare("m", t, StringComparison.OrdinalIgnoreCase) != 0)
-               .Select(t => ParseElement(t) )
+               .Select(t => ParseElement(t))
                .Cast<IAddressPathElement>()
                .ToList()
-            };   
+            };
         #endregion
     }
 }
