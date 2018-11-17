@@ -40,22 +40,27 @@ namespace Hardwarewallets.Net.UnitTests
         [Fact]
         public void TestParser()
         {
-            var addressPath = AddressPathBase.Parse<BIP44AddressPath>("m/45/5/3/5'");
-            Assert.Equal(4, addressPath.AddressPathElements.Count);
+            var bip44AddressPath = AddressPathBase.Parse<BIP44AddressPath>("m/45/5/3/5'");
+            Assert.True(4 == bip44AddressPath.AddressPathElements.Count);
 
-            Assert.Equal(45, (int)addressPath.AddressPathElements[0].UnhardenedValue);
-            Assert.False(addressPath.AddressPathElements[0].Harden);
+            Assert.True(45 == bip44AddressPath.AddressPathElements[0].UnhardenedValue);
+            Assert.False(bip44AddressPath.AddressPathElements[0].Harden);
 
-            Assert.Equal(5, (int)addressPath.AddressPathElements[1].UnhardenedValue);
-            Assert.False(addressPath.AddressPathElements[1].Harden);
+            Assert.True(5 == bip44AddressPath.AddressPathElements[1].UnhardenedValue);
+            Assert.False(bip44AddressPath.AddressPathElements[1].Harden);
 
-            Assert.Equal(3, (int)addressPath.AddressPathElements[2].UnhardenedValue);
-            Assert.False(addressPath.AddressPathElements[2].Harden);
+            Assert.True(3 == bip44AddressPath.AddressPathElements[2].UnhardenedValue);
+            Assert.False(bip44AddressPath.AddressPathElements[2].Harden);
 
-            Assert.Equal(5, (int)addressPath.AddressPathElements[3].UnhardenedValue);
-            Assert.True(addressPath.AddressPathElements[3].Harden);
+            Assert.True(5 == bip44AddressPath.AddressPathElements[3].UnhardenedValue);
+            Assert.True(bip44AddressPath.AddressPathElements[3].Harden);
 
-            Assert.True(2147483653 == addressPath.ToArray()[3]);
+            Assert.True(2147483653 == bip44AddressPath.ToArray()[3]);
+
+            var customAddressPath = AddressPathBase.Parse<CustomAddressPath>("m/45/5/3/5'");
+
+            Assert.True(2147483653 == customAddressPath.ToArray()[3]);
+            Assert.True(5 == customAddressPath.AddressPathElements[3].UnhardenedValue);
         }
     }
 }

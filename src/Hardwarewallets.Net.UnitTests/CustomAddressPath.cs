@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Hardwarewallets.Net.AddressManagement;
+using Hardwarewallets.Net.Model;
 
 namespace Hardwarewallets.Net.UnitTests
 {
-    public class CustomAddressPath
+    public class CustomAddressPath : AddressPathBase
     {
     }
 }
