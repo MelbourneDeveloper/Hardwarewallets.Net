@@ -8,7 +8,7 @@ namespace Hardwarewallets.Net.AddressManagement
     public abstract class AddressPathBase : IAddressPath
     {
         #region Public Properties
-        public List<IAddressPathElement> AddressPathElements { get; } = new List<IAddressPathElement>();
+        public List<IAddressPathElement> AddressPathElements { get; set; } = new List<IAddressPathElement>();
         #endregion
 
         #region Private Static Methods
@@ -28,21 +28,22 @@ namespace Hardwarewallets.Net.AddressManagement
         #endregion
 
         #region Public Static Methods
-        public static T Parse<T>(string path) where T : AddressPathBase, new()
-        {
-            var addressPathBase = new T();
-
-            path.Split('/').
-               Where(t => string.Compare("m", t, StringComparison.OrdinalIgnoreCase) != 0).
-               Select(
-               t => new AddressPathElement
-               {
-                   Harden = t.EndsWith("'"),
-                   UnhardenedValue = ParseElement(t)
-               }).ToList().ForEach(e => addressPathBase.AddressPathElements.Add(e));
-
-            return addressPathBase;
-        }
+        public static T Parse<T>(string path) where T : AddressPathBase, new() => 
+            new T()
+            {
+               AddressPathElements = path.Split('/')
+               .Where(t => string.Compare("m", t, StringComparison.OrdinalIgnoreCase) != 0)
+               .Select
+               (
+                   t => new AddressPathElement
+                   {
+                       Harden = t.EndsWith("'"),
+                       UnhardenedValue = ParseElement(t)
+                   }
+               )
+               .Cast<IAddressPathElement>()
+               .ToList()
+            };   
         #endregion
     }
 }
