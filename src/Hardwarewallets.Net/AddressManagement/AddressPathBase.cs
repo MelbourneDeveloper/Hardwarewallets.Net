@@ -33,7 +33,7 @@ namespace Hardwarewallets.Net.AddressManagement
             var addressPathBase = new T();
 
             path.Split('/').
-               Where(t => string.Compare("m", t, true) != 0).
+               Where(t => string.Compare("m", t, StringComparison.OrdinalIgnoreCase) != 0).
                Select(
                t => new AddressPathElement
                {

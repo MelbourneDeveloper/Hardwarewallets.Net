@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hardwarewallets.Net.Model
+﻿namespace Hardwarewallets.Net.Model
 {
     public interface IAddressPathElement
     {
