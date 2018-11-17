@@ -41,6 +41,19 @@ namespace Hardwarewallets.Net.UnitTests
         public void TestParser()
         {
             var addressPath = AddressPathBase.Parse<BIP44AddressPath>("m/45/5/3/5'");
+            Assert.Equal(4, addressPath.AddressPathElements.Count);
+
+            Assert.Equal(45, (int)addressPath.AddressPathElements[0].UnhardenedValue);
+            Assert.False(addressPath.AddressPathElements[0].Harden);
+
+            Assert.Equal(5, (int)addressPath.AddressPathElements[1].UnhardenedValue);
+            Assert.False(addressPath.AddressPathElements[1].Harden);
+
+            Assert.Equal(3, (int)addressPath.AddressPathElements[2].UnhardenedValue);
+            Assert.False(addressPath.AddressPathElements[2].Harden);
+
+            Assert.Equal(5, (int)addressPath.AddressPathElements[3].UnhardenedValue);
+            Assert.True(addressPath.AddressPathElements[3].Harden);
         }
     }
 }
