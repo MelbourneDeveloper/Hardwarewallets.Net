@@ -88,6 +88,18 @@ namespace Hardwarewallets.Net.UnitTests
                 validationException = ex;
             }
             Assert.NotNull(validationException);
+
+            validationException = null;
+            try
+            {
+                bip44AddressPath = AddressPathBase.Parse<BIP44AddressPath>("50'/0'/0/0/0");
+                bip44AddressPath.Validate();
+            }
+            catch (Exception ex)
+            {
+                validationException = ex;
+            }
+            Assert.NotNull(validationException);
         }
     }
 }

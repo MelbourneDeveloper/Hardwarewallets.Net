@@ -14,14 +14,12 @@ namespace Hardwarewallets.Net.AddressManagement
         #region Private Static Methods
         private static AddressPathElement ParseElement(string elementString)
         {
-            var harden = elementString.EndsWith("'");
-
             if (!uint.TryParse(elementString.Replace("'", string.Empty), out var unhardenedNumber))
             {
                 throw new Exception($"The value {elementString} is not a valid path element");
             }
 
-            return new AddressPathElement { Harden = harden, UnhardenedValue = unhardenedNumber };
+            return new AddressPathElement { Harden = elementString.EndsWith("'"), UnhardenedValue = unhardenedNumber };
         }
         #endregion
 
