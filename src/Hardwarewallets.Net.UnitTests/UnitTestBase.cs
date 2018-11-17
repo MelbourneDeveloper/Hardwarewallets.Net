@@ -78,6 +78,8 @@ namespace Hardwarewallets.Net.UnitTests
             Assert.True(0 == bip44AddressPath.Change);
             Assert.True(0 == bip44AddressPath.AddressIndex);
 
+            Assert.True(bip44AddressPath.ToArray()[0] == 2147483692);
+
             var sb = new StringBuilder();
             sb.Append("M");
             for (var i = 0; i < 100; i++)
