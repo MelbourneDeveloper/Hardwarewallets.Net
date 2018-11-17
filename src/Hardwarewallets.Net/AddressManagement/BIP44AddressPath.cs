@@ -29,10 +29,5 @@ namespace Hardwarewallets.Net.AddressManagement
             AddressPathElements.Add(new AddressPathElement { UnhardenedValue = isChange ? 1 : (uint)0, Harden = false });
             AddressPathElements.Add(new AddressPathElement { UnhardenedValue = addressIndex, Harden = false });
         }
-
-        public uint[] ToUnhardenedArray()
-        {
-            return new uint[5] { Purpose, CoinType, Account, Change, AddressIndex };
-        }
     }
 }
