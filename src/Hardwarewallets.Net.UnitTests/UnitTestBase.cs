@@ -1,4 +1,5 @@
 ﻿using Hardwarewallets.Net.AddressManagement;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -40,30 +41,24 @@ namespace Hardwarewallets.Net.UnitTests
         [Fact]
         public void TestParser()
         {
-            var bip44AddressPath = AddressPathBase.Parse<BIP44AddressPath>("m/45/5/3/5'/0'");
-            Assert.True(5 == bip44AddressPath.AddressPathElements.Count);
+            var customAddressPath = AddressPathBase.Parse<CustomAddressPath>("m/45/5/3/5'/0'");
+            Assert.True(5 == customAddressPath.AddressPathElements.Count);
 
-            Assert.True(45 == bip44AddressPath.Purpose);
-            Assert.True(5 == bip44AddressPath.CoinType);
-            Assert.True(3 == bip44AddressPath.Account);
-            Assert.True(5 == bip44AddressPath.Change);
-            Assert.True(0 == bip44AddressPath.AddressIndex);
+            Assert.True(45 == customAddressPath.AddressPathElements[0].UnhardenedValue);
+            Assert.False(customAddressPath.AddressPathElements[0].Harden);
 
-            Assert.True(45 == bip44AddressPath.AddressPathElements[0].UnhardenedValue);
-            Assert.False(bip44AddressPath.AddressPathElements[0].Harden);
+            Assert.True(5 == customAddressPath.AddressPathElements[1].UnhardenedValue);
+            Assert.False(customAddressPath.AddressPathElements[1].Harden);
 
-            Assert.True(5 == bip44AddressPath.AddressPathElements[1].UnhardenedValue);
-            Assert.False(bip44AddressPath.AddressPathElements[1].Harden);
+            Assert.True(3 == customAddressPath.AddressPathElements[2].UnhardenedValue);
+            Assert.False(customAddressPath.AddressPathElements[2].Harden);
 
-            Assert.True(3 == bip44AddressPath.AddressPathElements[2].UnhardenedValue);
-            Assert.False(bip44AddressPath.AddressPathElements[2].Harden);
+            Assert.True(5 == customAddressPath.AddressPathElements[3].UnhardenedValue);
+            Assert.True(customAddressPath.AddressPathElements[3].Harden);
 
-            Assert.True(5 == bip44AddressPath.AddressPathElements[3].UnhardenedValue);
-            Assert.True(bip44AddressPath.AddressPathElements[3].Harden);
+            Assert.True(2147483653 == customAddressPath.ToArray()[3]);
 
-            Assert.True(2147483653 == bip44AddressPath.ToArray()[3]);
-
-            var customAddressPath = AddressPathBase.Parse<CustomAddressPath>("m/45/5/3/5'");
+            customAddressPath = AddressPathBase.Parse<CustomAddressPath>("m/45/5/3/5'");
 
             Assert.True(2147483653 == customAddressPath.ToArray()[3]);
             Assert.True(5 == customAddressPath.AddressPathElements[3].UnhardenedValue);
@@ -73,6 +68,26 @@ namespace Hardwarewallets.Net.UnitTests
             Assert.True(0 == customAddressPath.AddressPathElements[0].UnhardenedValue);
             Assert.True(1 == customAddressPath.AddressPathElements[1].UnhardenedValue);
             Assert.True(2 == customAddressPath.AddressPathElements[2].UnhardenedValue);
+
+            var bip44AddressPath = AddressPathBase.Parse<BIP44AddressPath>("44'/0'/0'/0/0");
+
+            Assert.True(44 == bip44AddressPath.Purpose);
+            Assert.True(0 == bip44AddressPath.CoinType);
+            Assert.True(0 == bip44AddressPath.Account);
+            Assert.True(0 == bip44AddressPath.Change);
+            Assert.True(0 == bip44AddressPath.AddressIndex);
+
+            Exception validationException = null;
+            try
+            {
+                bip44AddressPath = AddressPathBase.Parse<BIP44AddressPath>("44'/0'/0/0/0");
+                bip44AddressPath.Validate();
+            }
+            catch (Exception ex)
+            {
+                validationException = ex;
+            }
+            Assert.NotNull(validationException);
         }
     }
 }
