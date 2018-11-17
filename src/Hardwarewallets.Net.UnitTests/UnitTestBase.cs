@@ -107,7 +107,7 @@ namespace Hardwarewallets.Net.UnitTests
             validationException = null;
             try
             {
-                bip44AddressPath = AddressPathBase.Parse<BIP44AddressPath>("50'/0'/0/0/0");
+                bip44AddressPath = AddressPathBase.Parse<BIP44AddressPath>("50'/0'/0'/0/0");
                 bip44AddressPath.Validate();
             }
             catch (Exception ex)
