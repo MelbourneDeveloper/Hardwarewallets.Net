@@ -31,7 +31,7 @@ namespace Hardwarewallets.Net.AddressManagement
 
         #region Public Static Methods
         public static T Parse<T>(string path) where T : AddressPathBase, new() =>
-            new T()
+            new T
             {
                 AddressPathElements = path.Split('/')
                .Where(t => string.Compare("m", t, StringComparison.OrdinalIgnoreCase) != 0)
