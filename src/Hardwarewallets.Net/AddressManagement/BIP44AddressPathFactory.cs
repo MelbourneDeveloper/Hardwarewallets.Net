@@ -3,12 +3,12 @@ using Hardwarewallets.Net.Model;
 
 namespace Hardwarewallets.Net
 {
-    public class AddressPathFactory : IAddressPathFactory
+    public class BIP44AddressPathFactory : IAddressPathFactory
     {
         public bool IsSegwit { get; }
         public uint CointType { get; }
 
-        public AddressPathFactory(bool isSegwit, uint coinType)
+        public BIP44AddressPathFactory(bool isSegwit, uint coinType)
         {
             IsSegwit = isSegwit;
             CointType = coinType;
@@ -16,7 +16,7 @@ namespace Hardwarewallets.Net
 
         public IAddressPath GetAddressPath(uint change, uint account, uint addressIndex)
         {
-            return new AddressPath(IsSegwit, CointType, account, change == 0 ? false : true, addressIndex);
+            return new BIP44AddressPath(IsSegwit, CointType, account, change == 0 ? false : true, addressIndex);
         }
     }
 }

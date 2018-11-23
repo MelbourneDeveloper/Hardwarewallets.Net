@@ -1,43 +1,20 @@
-﻿namespace Hardwarewallets.Net.Model
+﻿using System.Collections.Generic;
+
+namespace Hardwarewallets.Net.Model
 {
     /// <summary>
-    /// BIP 004 Address Path broken up in to its constituent parts. https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
+    /// An broken up in to its constituent parts for the purpose of performing operations on a Hardwarewallet device.
     /// </summary>
     public interface IAddressPath
     {
         /// <summary>
-        /// Unhardened Purpose. This will be hardened when ToHardenedArray() is called.
+        /// The collection of IAddressPathElements which make up the address path
         /// </summary>
-        uint Purpose { get; }
+        List<IAddressPathElement> AddressPathElements { get; }
 
         /// <summary>
-        /// Unhardened CoinType. This will be hardened when ToHardenedArray() is called.
+        /// Returns the address path as an array of uints. Indices will be hardended or unhardened depending on their IsHardened property
         /// </summary>
-        uint CoinType { get; }
-
-        /// <summary>
-        /// Unhardened Account. This will be hardened when ToHardenedArray() is called.
-        /// </summary>
-        uint Account { get; }
-
-        /// <summary>
-        /// Unhardened Change. This will be not hardened when ToHardenedArray() is called.
-        /// </summary>
-        uint Change { get; }
-
-        /// <summary>
-        /// Unhardened AddressIndex. This will be not hardened when ToHardenedArray() is called.
-        /// </summary>
-        uint AddressIndex { get; }
-
-        /// <summary>
-        /// Returns the BIP44 address path as an array of uints. The first three indices are hardened but the last two are not. 
-        /// </summary>
-        uint[] ToUnhardenedArray();
-
-        /// <summary>
-        /// Returns the BIP44 address path as an array of uints. No indices are hardened
-        /// </summary>
-        uint[] ToHardenedArray();
+        uint[] ToArray();
     }
 }

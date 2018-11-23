@@ -10,6 +10,10 @@
     <Compile Remove="DummyEthereumTransaction.cs" />
     <Compile Remove="DummySignedEthereumTransaction.cs" />
     <Compile Remove="DummyWalletManager.cs" />
+    <Compile Remove="KeepKeyUnitTests.cs" />
+    <Compile Remove="LedgerDotNetApiTests.cs" />
+    <Compile Remove="LedgerDotNetApiWrapper.cs" />
+    <Compile Remove="LedgerDotNetTests.cs" />
   </ItemGroup>
 
   <ItemGroup>
