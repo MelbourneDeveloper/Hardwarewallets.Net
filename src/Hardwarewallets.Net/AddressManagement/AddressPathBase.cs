@@ -19,17 +19,17 @@ namespace Hardwarewallets.Net.AddressManagement
                 throw new Exception($"The value {elementString} is not a valid path element");
             }
 
-            return new AddressPathElement { Harden = elementString.EndsWith("'"), UnhardenedValue = unhardenedNumber };
+            return new AddressPathElement { Harden = elementString.EndsWith("'"), Value = unhardenedNumber };
         }
         #endregion
 
         #region Public Methods
-        public uint[] ToArray() => AddressPathElements.Select(ape => ape.Harden ? AddressUtilities.HardenNumber(ape.UnhardenedValue) : ape.UnhardenedValue).ToArray();
+        public uint[] ToArray() => AddressPathElements.Select(ape => ape.Harden ? AddressUtilities.HardenNumber(ape.Value) : ape.Value).ToArray();
         #endregion
 
         public override string ToString()
         {
-            return $"m/{string.Join("/", AddressPathElements.Select(ape=>$"{ape.UnhardenedValue}{(ape.Harden?"'":string.Empty)}"))}"; 
+            return $"m/{string.Join("/", AddressPathElements.Select(ape=>$"{ape.Value}{(ape.Harden?"'":string.Empty)}"))}"; 
         }
 
         #region Public Static Methods

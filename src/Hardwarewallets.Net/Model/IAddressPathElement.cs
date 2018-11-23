@@ -2,7 +2,7 @@
 {
     public interface IAddressPathElement
     {
-        uint UnhardenedValue { get; }
+        uint Value { get; }
         bool Harden { get; }
     }
 }
