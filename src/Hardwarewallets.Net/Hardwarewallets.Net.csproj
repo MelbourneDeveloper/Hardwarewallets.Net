@@ -6,7 +6,7 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net/blob/master/LICENSE</PackageLicenseUrl>
     <AutoGenerateBindingRedirects>True</AutoGenerateBindingRedirects>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <Authors>Christian Findlay</Authors>
     <Description>Cross platform, base C# library for all Hardwarewallets. Provides simple interfaces that sit underneath all hardwarewallet libraries, and utilitiy classes that sit over the top all libraries</Description>
     <Copyright>Christian Findlay</Copyright>
@@ -14,8 +14,8 @@
     <RepositoryUrl>https://github.com/MelbourneDeveloper/Hardwarewallets.Net</RepositoryUrl>
     <PackageTags>Hardwarewallet Trezor KeepKey Ledger Bitcoin Ethereum</PackageTags>
     <PackageReleaseNotes>First release of interfaces and utility classes for getting addresses</PackageReleaseNotes>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
     <LangVersion>7.3</LangVersion>
   </PropertyGroup>
 
