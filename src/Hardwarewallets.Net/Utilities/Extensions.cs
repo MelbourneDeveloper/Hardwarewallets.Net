@@ -28,5 +28,10 @@ namespace Hardwarewallets.Net.Utilities
 
             return returnValue;
         }
+
+        public static byte[] ToHexBytes(this decimal value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using Hardwarewallets.Net.Model;
+using System.Threading.Tasks;
 
 namespace Hardwarewallets.Net
 {
     public interface ITransactionSigner<TTransaction, TTransactionRequest> where TTransaction : ITransaction
     {
-        TTransactionRequest SignTransction(TTransaction transaction);
+        Task<TTransactionRequest> SignTransction(TTransaction transaction);
     }
 }
