@@ -15,7 +15,7 @@ This library is a work in progress. The concept of this library is to put a set 
 
 ## NuGet
 
-Install-Package Trezor.Net
+Install-Package Hardwarewallets.Net
 
 ## Progress
 Current Coin Types (and their clones):
