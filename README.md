@@ -4,6 +4,9 @@ Cross Platform C# Library for Cryptocurrency Hardwarewallets. The aim is to achi
 Join us on Slack:
 https://hardwarewallets.slack.com
 
+Twitter:
+https://twitter.com/HardfolioApp
+
 Currently supports:
 * .NET Framework
 * .NET Core
