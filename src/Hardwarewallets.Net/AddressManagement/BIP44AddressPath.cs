@@ -28,7 +28,7 @@ namespace Hardwarewallets.Net.AddressManagement
             if (!AddressPathElements[1].Harden) throw new Exception($"{errorPrefix} Coint Type must be hardened");
             if (!AddressPathElements[2].Harden) throw new Exception($"{errorPrefix} Account must be hardened");
             if (AddressPathElements[3].Harden) throw new Exception($"{errorPrefix} Change must not be hardened");
-            if (AddressPathElements[3].Value != 0 && AddressPathElements[0].Value != 1) throw new Exception($"{errorPrefix} Change must 0 or 1");
+            if (AddressPathElements[3].Value != 0 && AddressPathElements[3].Value != 1) throw new Exception($"{errorPrefix} Change must 0 or 1");
             if (AddressPathElements[4].Harden) throw new Exception($"{errorPrefix} Address Index must not be hardened");
             return true;
         }
